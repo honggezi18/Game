@@ -1,16 +1,16 @@
-%% auther: xyao   
-%% email: jiexiaowen@gmail.com   
-%% date: 2010.06.12
+%% auther: 严利宏   
+%% email: 542430172@qq.com   
+%% date: 2014.08.27
   
 {   
-    application, gs,
+    application, yx,
     [   
-        {description, "This is a game server."},   
-        {vsn, "1.0a"},   
-        {modules,[gs]},
-        {registered, [gs_app]},
+        {description, "This is a youxi game server."},   
+        {vsn, "1.0"},   
+        {modules,[yx]},
+        {registered, [yx_app]},
         {applications, [kernel, stdlib, sasl]},   
-        {mod, {gs_app, []}},
+        {mod, {yx_app, []}},
         {start_phases, []},
 		{env,[ 
                 {server, "T1"}
