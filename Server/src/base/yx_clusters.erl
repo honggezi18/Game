@@ -4,6 +4,7 @@
 %%% @doc 跨服线启动服务.
 %%% @end
 %%%------------------------------------
+%%% @private
 
 -module(yx_clusters).
 -export([start/1, stop/0]).
