@@ -2,7 +2,9 @@
 del /Q .\logs\*
 
 cd script
-start "" my_gs1.bat
-start "" a_my_gs10.bat
+
+:: start "" yx0.bat 
+start "" yx1.bat
+start "" yx10.bat
 
 exit
