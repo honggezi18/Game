@@ -13,7 +13,6 @@
 start([Ip, Port, Sid]) ->
     % 开启底层服务
     ok = start_disperse([Ip, Port, Sid]),
-    ok = start_sys_time(),
     ok = start_client(),
     ok = start_tcp(Port),
     % 开启游戏逻辑服务
@@ -26,15 +25,6 @@ stop() ->
     supervisor:terminate_child(yx_sup, yx_tcp_listener_sup),
     supervisor:terminate_child(yx_sup, timer_frame),
     supervisor:terminate_child(yx_sup, timer_day),
-    ok.
-
-%% 开启时间生成器
-start_sys_time() ->
-    {ok,_} = supervisor:start_child(
-        yx_sup,
-        {mod_time,
-            {mod_time, start_link,[]},
-            permanent, 10000, supervisor, [mod_time]}),
     ok.
 
 %% 开启线路管理服务

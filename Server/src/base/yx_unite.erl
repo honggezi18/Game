@@ -13,7 +13,6 @@
 start([Ip, Port, Sid]) ->
     % 开启底层服务
     ok = start_disperse([Ip, Port, Sid]),
-    ok = start_sys_time(),
     ok = start_client(),
     ok = start_tcp(Port),
     % 开启公共逻辑服务
@@ -23,15 +22,6 @@ start([Ip, Port, Sid]) ->
 %% 关闭服务器时需停止
 stop() ->
     io:format("关闭~w...~n", [?MODULE]),
-    ok.
-
-%% 开启时间生成器
-start_sys_time() ->
-    {ok,_} = supervisor:start_child(
-        yx_sup,
-        {mod_time,
-            {mod_time, start_link,[]},
-            permanent, 10000, supervisor, [mod_time]}),
     ok.
 
 %% 开启线路管理服务
