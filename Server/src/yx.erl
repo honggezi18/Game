@@ -1,6 +1,6 @@
 %%%------------------------------------
 %%% @author 严利宏 <542430172@qq.com>
-%%% @copyright 2014.08.25
+%%% @copyright jieyou 2014.08.25
 %%% @doc 游戏服务器开关.
 %%% @end
 %%%------------------------------------
@@ -12,7 +12,7 @@
 
 -include("server.hrl").
 
--define(SERVER_APP, yx_server).
+-define(SERVER_APP, yx).
 
 %% @doc 开启游戏服务器
 server_start()->
