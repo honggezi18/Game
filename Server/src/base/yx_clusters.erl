@@ -25,7 +25,7 @@ stop() ->
 %% 开启线路管理服务
 start_disperse([Ip, Port, Sid]) ->
     {ok,_} = supervisor:start_child(
-        sd_sup,
+        yx_sup,
         {mod_disperse,
             {mod_disperse, start_link,[Ip, Port, Sid]},
             permanent, 10000, supervisor, [mod_disperse]}),

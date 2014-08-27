@@ -23,7 +23,7 @@ init([unite]) ->
           [{yx_reader, {yx_reader,start_link,[unite, none, 0]},
             temporary, brutal_kill, worker, [yx_reader]}]}};
 
-init(server) ->
+init([server]) ->
     {ok, {{simple_one_for_one, 10, 10},
           [{yx_reader, {yx_reader,start_link,[server]},
             temporary, brutal_kill, worker, [yx_reader]}]}}.

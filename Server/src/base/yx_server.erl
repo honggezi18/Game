@@ -23,15 +23,15 @@ start([Ip, Port, Sid]) ->
 %% 关闭服务器时需停止
 stop() ->
     io:format("关闭~w...~n", [?MODULE]),
-    supervisor:terminate_child(sd_sup, sd_tcp_listener_sup),
-    supervisor:terminate_child(sd_sup, timer_frame),
-    supervisor:terminate_child(sd_sup, timer_day),
+    supervisor:terminate_child(yx_sup, yx_tcp_listener_sup),
+    supervisor:terminate_child(yx_sup, timer_frame),
+    supervisor:terminate_child(yx_sup, timer_day),
     ok.
 
 %% 开启时间生成器
 start_sys_time() ->
     {ok,_} = supervisor:start_child(
-        sd_sup,
+        yx_sup,
         {mod_time,
             {mod_time, start_link,[]},
             permanent, 10000, supervisor, [mod_time]}),
@@ -40,7 +40,7 @@ start_sys_time() ->
 %% 开启线路管理服务
 start_disperse([Ip, Port, Sid]) ->
     {ok,_} = supervisor:start_child(
-        sd_sup,
+        yx_sup,
         {mod_disperse,
             {mod_disperse, start_link,[Ip, Port, Sid]},
             permanent, 10000, supervisor, [mod_disperse]}),
@@ -49,17 +49,17 @@ start_disperse([Ip, Port, Sid]) ->
 %% 开启客户端监控树
 start_client() ->
     {ok,_} = supervisor:start_child(
-        sd_sup,
-        {sd_tcp_client_sup,
-            {sd_tcp_client_sup, start_link,[server]},
-            transient, infinity, supervisor, [sd_tcp_client_sup]}),
+        yx_sup,
+        {yx_tcp_client_sup,
+            {yx_tcp_client_sup, start_link,[server]},
+            transient, infinity, supervisor, [yx_tcp_client_sup]}),
     ok.
 
 %%开启tcp listener监控树
 start_tcp(Port) ->
     {ok,_} = supervisor:start_child(
-        sd_sup,
-        {sd_tcp_listener_sup,
-            {sd_tcp_listener_sup, start_link, [Port]},
-            transient, infinity, supervisor, [sd_tcp_listener_sup]}),
+        yx_sup,
+        {yx_tcp_listener_sup,
+            {yx_tcp_listener_sup, start_link, [Port]},
+            transient, infinity, supervisor, [yx_tcp_listener_sup]}),
     ok.
