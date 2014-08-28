@@ -1,5 +1,5 @@
 %%%------------------------------------
-%%% @author 严利宏 <542430172@qq.com>
+%%% @author xyao <jiexiaowen@gmail.com>
 %%% @copyright jieyou 2014.08.25
 %%% @doc 客户端服务监控树.
 %%% @end
