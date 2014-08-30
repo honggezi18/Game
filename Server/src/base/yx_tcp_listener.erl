@@ -11,7 +11,9 @@
 -export([start_link/2]).
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2,
         terminate/2, code_change/3]).
--include("common.hrl").
+
+%%tcp_server监听参数
+-define(TCP_OPTIONS, [binary, {packet, 0}, {active, false}, {reuseaddr, true}, {nodelay, false}, {delay_send, true}, {send_timeout, 5000}, {keepalive, true}, {exit_on_close, true}]).
 
 start_link(AcceptorCount, Port) ->
     gen_server:start_link(?MODULE, {AcceptorCount, Port}, []).

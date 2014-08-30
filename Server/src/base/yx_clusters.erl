@@ -9,7 +9,7 @@
 -module(yx_clusters).
 -export([start/1, stop/0]).
 
-% 跨服线中需要开启的开启服务
+%% @doc 跨服线中需要开启的开启服务
 start([Ip, Port, Sid]) ->
     % 开启底层服务
     ok = start_disperse([Ip, Port, Sid]),
@@ -17,12 +17,12 @@ start([Ip, Port, Sid]) ->
     ok = yx_clusters_base:start(),
     ok.
 
-%% 关闭服务器时需停止
+%% @doc 关闭服务器时需停止
 stop() ->
     io:format("关闭~w...~n", [?MODULE]),
     ok.
 
-%% 开启线路管理服务
+%% @doc 开启线路管理服务
 start_disperse([Ip, Port, Sid]) ->
     {ok,_} = supervisor:start_child(
         yx_sup,

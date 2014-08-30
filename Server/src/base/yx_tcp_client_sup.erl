@@ -20,7 +20,7 @@ start_link(server) ->
 
 init([unite]) ->
     {ok, {{simple_one_for_one, 10, 10},
-          [{yx_reader, {yx_reader,start_link,[unite, none, 0]},
+          [{yx_reader, {yx_reader,start_link,[unite]},
             temporary, brutal_kill, worker, [yx_reader]}]}};
 
 init([server]) ->

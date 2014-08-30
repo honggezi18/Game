@@ -10,7 +10,15 @@
         ,node_stop/0    % 停止游戏节点
     ]).
 
--include("server.hrl").
+%% 服务线路记录
+-record(server, {
+        id,
+        ip,
+        port,
+        node,
+        num = 0,
+        state = 0  %是否开放 0开放 1关闭
+    }).
 
 -define(SERVER_APP, yx).
 
