@@ -6,143 +6,53 @@
 %%%------------------------------------
 
 -module(yx_reader).
--export([start_link/1, init/1, run/3, log/2]).
+-export([start_link/0, init/0, run/3, log/2]).
 
--include("common.hrl").
--include("record.hrl").
 -define(TCP_TIMEOUT, 3000). % 解析协议超时时间
 -define(HEART_TIMEOUT, 100000). % 心跳包超时时间
 -define(HEART_TIMEOUT_TIME, 0). % 心跳包超时次数
--define(HEADER_LENGTH, 6). % 消息头长度
+-define(HEADER_LENGTH, 4). % 消息头长度
+-define(LIMITE_REQUEST, 80). % 限制次数
 
-%%记录客户端进程
--record(client, {
-        player = none
-        ,login  = 0
-        ,accid  = 0
-        ,accname = none
-        ,timeout = 0 % 超时次数
+
+%%flash843安全沙箱
+-define(FL_POLICY_REQ, <<"<pol">>).
+-define(FL_POLICY_REQ_All, <<"<policy-file-request/>\0">>).
+-define(FL_POLICY_FILE, <<"<cross-domain-policy><allow-access-from domain='*' to-ports='*' /></cross-domain-policy>">>).
+
+%%记录用户初始数据
+-record(player, {
+        socket = none,      % socket
+        pid = none,         % 玩家进程
+        login  = 0,         % 是否登录
+        accid  = 0,         % 账户id
+        accname = none,     % 账户名
+        timeout = 0,        % 超时次数
+        req_count = 0,      % 请求次数
+        req_list = [],      % 请求列表
+        req_time = 0        % 请求时间
     }).
 
-start_link(Type) ->
-    {ok, proc_lib:spawn_link(?MODULE, init, [Type])}.
+start_link() ->
+    {ok, proc_lib:spawn_link(?MODULE, init, [])}.
 
-%%=================================================
-%%gen_server init启动函数
-%%Host:主机IP
-%%Port:端口
-%%=================================================
-init(Type) ->
+init() ->
     process_flag(trap_exit, true),
-    Client = #client{
-        player = none
-        ,login  = 0
-        ,accid  = 0
-        ,accname = none
-        ,timeout = 0
+    Client = #player{
+        pid = none,
+        login  = 0,
+        accid  = 0,
+        accname = none,
+        timeout = 0
     },
-    case Type of
-        unite ->
-            receive
-                {go, Socket} ->
-                    unite_parse_packet(Socket, Client)
-            end;
-        server ->
-            receive
-                {go, Socket} ->
-                    login_parse_packet(Socket, Client)
-            end
-    end.
-
-%%================================================
-%% 启动公共服务器 1线
-%%================================================
-unite_parse_packet(Socket, Client) ->
-    Ref = async_recv(Socket, ?HEADER_LENGTH, ?HEART_TIMEOUT),
     receive
-        %%flash安全沙箱
-        {inet_async, Socket, Ref, {ok, ?FL_POLICY_REQ}} ->
-            Len = 23 - ?HEADER_LENGTH,
-            async_recv(Socket, Len, ?TCP_TIMEOUT),
-            lib_send:send_one(Socket, ?FL_POLICY_FILE),
-            gen_tcp:close(Socket);
-
-        %%公共逻辑处理
-        {inet_async, Socket, Ref, {ok, <<Len:16, Cmd:32>>}} ->
-            BodyLen = Len - ?HEADER_LENGTH,
-            case BodyLen > 0 of
-                true ->
-                    Ref1 = async_recv(Socket, BodyLen, ?TCP_TIMEOUT),
-                    receive
-                        {inet_async, Socket, Ref1, {ok, Binary}} ->
-                            case routing(Cmd, Binary) of
-                                %%先验证登陆
-                                {ok, login, Data} ->
-                                    case pp_account:handle(10099, [Socket, 2], Data) of
-                                        false ->
-                                            {ok, BinData} = pt_10:write(10099, 0),
-                                            lib_send:send_one(Socket, BinData),
-                                            unite_login_lost(Socket, Client, 0, "login fail");
-                                        Pid ->
-                                            {ok, BinData} = pt_10:write(10099, 1),
-                                            lib_send:send_one(Socket, BinData),
-                                            Client1 = Client#client{player=Pid, login = 1},
-                                            unite_parse_packet(Socket, Client1)
-                                    end;
-
-                                %%进入逻辑
-                                {ok, Data} ->
-                                    case Client#client.login == 1 of
-                                        true ->
-                                            case catch gen:call(Client#client.player, '$gen_call', {'SOCKET_EVENT', Cmd, Data}) of
-                                                {ok,_Res} ->
-                                                    unite_parse_packet(Socket, Client);
-                                                {'EXIT',Reason} ->
-                                                    unite_login_lost(Socket, Client, Cmd, Reason)
-                                            end;
-                                        false ->
-                                            unite_parse_packet(Socket, Client)
-                                    end;
-
-                                _Other ->
-                                    unite_parse_packet(Socket, Client)
-                            end;
-                        Other ->
-                            unite_login_lost(Socket, Client, 0, Other)
-                    end;
-                false ->
-                    case Client#client.login == 1 of
-                        true ->
-                            catch gen:call(Client#client.player, '$gen_call', {'SOCKET_EVENT', Cmd, []}),
-                            unite_parse_packet(Socket, Client);
-                        false ->
-                            unite_parse_packet(Socket, Client)
-                    end
-            end;
-
-        %%超时处理
-        {inet_async, Socket, Ref, {error,timeout}} ->
-            case Client#client.timeout >= ?HEART_TIMEOUT_TIME of
-                true ->
-                    unite_login_lost(Socket, Client, 0, {error,timeout});
-
-                false ->
-                    unite_parse_packet(Socket, Client#client {timeout = Client#client.timeout+1})
-            end;
-
-        %%用户断开连接或出错
-        Other ->
-            unite_login_lost(Socket, Client, 0, Other)
+        {go, Socket} ->
+            login_parse_packet(Socket, Client#player{socket = Socket})
     end.
 
-%%断开连接
-unite_login_lost(_Socket, Client, _Cmd, Reason) ->
-    mod_unite:stop(Client#client.player),
-    exit({unexpected_message, Reason}).
-
-%%================================================
-%% 所有游戏逻辑服务器 10+线
-%%================================================
+%%登录验证
+%%Socket：socket id
+%%Client: client记录
 login_parse_packet(Socket, Client) ->
     Ref = async_recv(Socket, ?HEADER_LENGTH, ?HEART_TIMEOUT),
     receive
@@ -150,141 +60,64 @@ login_parse_packet(Socket, Client) ->
         {inet_async, Socket, Ref, {ok, ?FL_POLICY_REQ}} ->
             Len = 23 - ?HEADER_LENGTH,
             async_recv(Socket, Len, ?TCP_TIMEOUT),
-            lib_send:send_one(Socket, ?FL_POLICY_FILE),
+            gen_tcp:send(Socket, ?FL_POLICY_FILE),
             gen_tcp:close(Socket);
 
-        %%登陆处理
-        {inet_async, Socket, Ref, {ok, <<Len:16, Cmd:32>>}} ->
+        %%登录处理
+        {inet_async, Socket, Ref, {ok, <<Len:16, Cmd:16>>}} ->
             BodyLen = Len - ?HEADER_LENGTH,
-            case BodyLen > 0 of
+            case BodyLen >= 0 of
                 true ->
-                    Ref1 = async_recv(Socket, BodyLen, ?TCP_TIMEOUT),
-                    receive
-                        {inet_async, Socket, Ref1, {ok, Binary}} ->
-                            case routing(Cmd, Binary) of
-                                %%先验证登陆
-                                {ok, login, Data} ->
-                                    case pp_account:handle(10000, [], Data) of
-                                        true ->
-                                            [Accid, Accname, _, _] = Data,
-                                            Client1 = Client#client{
-                                                login = 1,
-                                                accid = Accid,
-                                                accname = Accname
-                                            },
-                                            Uid = case lib_player:get_role_id_by_accname(Accname) of
-                                                null ->
-                                                    %% 创建页统计流失率
-                                                    %%lib_account:count_reg(),
-                                                    0;
-                                                Id ->
-                                                    Id
-                                            end,
-                                            {ok, BinData} = pt_10:write(10000, Uid),
-                                            lib_send:send_one(Socket, BinData),
-                                            login_parse_packet(Socket, Client1);
-                                        false ->
-                                            login_lost(Socket, Client, 0, "login fail")
-                                    end;
-
-                                %%读取玩家列表 
-                                {ok, lists, _Data} ->
-                                    case Client#client.login == 1 of
-                                        true ->
-                                            pp_account:handle(10002, Socket,  Client#client.accname),
-                                            login_parse_packet(Socket, Client);
-                                        false ->
-                                            login_lost(Socket, Client, 0, "login fail")
-                                    end;
-
-                                %%删除角色 - 暂不需要，后续合服会用到，先留着
-                                %{ok, delete, Id} ->
-                                %    case Client#client.login == 1 of
-                                %        true ->
-                                %            pp_account:handle(10005, Socket, [Id, Client#client.accname]),
-                                %            login_parse_packet(Socket, Client);
-                                %        false ->
-                                %            login_lost(Socket, Client, 0, "login fail")
-                                %    end;
-
-                                %%创建角色
-                                {ok, create, Data} ->
-                                    case Client#client.login == 1 of
-                                        true ->
-                                            Data1 = [Client#client.accid, Client#client.accname] ++ Data,
-                                            pp_account:handle(10003, Socket, Data1),
-                                            login_parse_packet(Socket, Client);
-                                        false ->
-                                            login_lost(Socket, Client, 0, "login fail")
-                                    end;
-
-                                %%进入游戏
-                                {ok, enter, [Id, L]} ->
-                                    case Client#client.login == 1 of
-                                        true ->
-                                            %% 获取IP
-                                            Ip1 = case inet:peername(Socket) of
-                                                        {ok, {Ip, _Port}} -> Ip;
-                                                        {error, _Reason} -> {0,0,0,0}
-                                                    end,
-                                            %% 避免同时登陆账号
-                                            case mod_disperse:rpc_call_by_id(0, mod_check_login, is_login, [Id, Ip1]) of
-                                                1  ->
-                                                    case mod_login:login(start, [Id, Client#client.accname, Ip1, L], Socket) of
-                                                        {error, MLR} ->
-                                                            %%告诉玩家登陆失败
-                                                            {ok, BinData} = pt_59:write(59004, MLR),
-                                                            lib_send:send_one(Socket, BinData),
-                                                            login_lost(Socket, Client, 0, "login fail");
-                                                        {ok, Pid, Server_id} ->
-                                                            %%告诉玩家登陆成功
-                                                            {ok, BinData} = pt_10:write(10004, [1, Server_id]),
-                                                            lib_send:send_one(Socket, BinData),
-                                                            login_parse_packet(Socket, Client#client {player = Pid})
-                                                    end;
-                                                LR ->
-                                                    {ok, BinData} = pt_59:write(59004, LR),
-                                                    lib_send:send_one(Socket, BinData),
-                                                    login_lost(Socket, Client, 0, "login fail")
+                    case BodyLen > 0 of
+                        true ->
+                            Ref1 = async_recv(Socket, BodyLen, ?TCP_TIMEOUT),
+                            receive
+                                {inet_async, Socket, Ref1, {ok, Binary}} ->
+                                    case routing(Cmd, Binary) of
+                                        {ok, Data} ->
+                                            %%先验证登陆
+                                            case pp_login:handle(Client, Data) of
+                                                {ok, Client1} ->
+                                                    login_parse_packet(Socket, Client1);
+                                                {ok, enter, Client1} -> %% 进入逻辑
+                                                    do_parse_packet(Socket, Client1);
+                                                _ ->
+                                                    login_parse_packet(Socket, Client)
                                             end;
-                                        false ->
-                                            login_lost(Socket, Client, 0, "login fail")
+                                        _ ->
+                                            login_parse_packet(Socket, Client)
                                     end;
-                                {ok, doubt_check, Id} -> %% 小号验证 
-                                    case Client#client.login == 1 of
-                                        true ->
-                                            pp_account:handle(10008, Socket, Id),
-                                            %{ok, BinData} = pt_10:write(10008, 1),
-                                            %lib_send:send_one(Socket, BinData),
-                                            do_parse_packet(Socket, Client);
-                                        false ->
-                                            login_lost(Socket, Client, 0, "login fail")
-                                    end;
-                                _Other ->
-                                    %%  其他协议接收不处理
-                                    login_parse_packet(Socket, Client)
+                                Other ->
+                                    login_lost(Socket, Client, 0, Other)
                             end;
-                        Other ->
-                            login_lost(Socket, Client, 0, Other)
+                        false ->
+                            case routing(Cmd, <<>>) of
+                                {ok, Data} ->
+                                    %%先验证登陆
+                                    case pp_login:handle(Client, Data) of
+                                        {ok, Client1} ->
+                                            login_parse_packet(Socket, Client1);
+                                        {ok, enter, Client1} -> %% 进入逻辑
+                                            do_parse_packet(Socket, Client1);
+                                        _ ->
+                                            login_parse_packet(Socket, Client)
+                                    end;
+                                _ ->
+                                    login_parse_packet(Socket, Client)
+                            end
                     end;
                 false ->
-                    case Client#client.login == 1 of
-                        true ->
-                            pp_account:handle(Cmd, Socket,  Client#client.accname),
-                            login_parse_packet(Socket, Client);
-                        false ->
-                            login_parse_packet(Socket, Client)
-                    end
+                    login_lost(Socket, Client, 0, "proto error")
             end;
 
         %%超时处理
         {inet_async, Socket, Ref, {error,timeout}} ->
-            case Client#client.timeout >= ?HEART_TIMEOUT_TIME of
+            case Client#player.timeout >= ?HEART_TIMEOUT_TIME of
                 true ->
                     login_lost(Socket, Client, 0, {error,timeout});
 
                 false ->
-                    login_parse_packet(Socket, Client#client {timeout = Client#client.timeout+1})
+                    login_parse_packet(Socket, Client#player {timeout = Client#player.timeout+1})
             end;
 
         %%用户断开连接或出错
@@ -292,59 +125,71 @@ login_parse_packet(Socket, Client) ->
             login_lost(Socket, Client, 0, Other)
     end.
 
-%%接收来自客户端的数据 - 登陆后进入游戏逻辑
+%%进入逻辑
 %%Socket：socket id
 %%Client: client记录
 do_parse_packet(Socket, Client) ->
     Ref = async_recv(Socket, ?HEADER_LENGTH, ?HEART_TIMEOUT),
     receive
-        {inet_async, Socket, Ref, {ok, <<Len:16, Cmd:32>>}} ->
+        {inet_async, Socket, Ref, {ok, <<Len:16, Cmd:16>>}} ->
             BodyLen = Len - ?HEADER_LENGTH,
-            case BodyLen > 0 of
+            case BodyLen >= 0 of
                 true ->
-                    Ref1 = async_recv(Socket, BodyLen, ?TCP_TIMEOUT),
-                    receive
-                        {inet_async, Socket, Ref1, {ok, Binary}} ->
-                            case routing(Cmd, Binary) of
-                                %%这里是处理游戏逻辑
-                                {ok, Data} ->
-                                    case catch gen:call(Client#client.player, '$gen_call', {'SOCKET_EVENT', Cmd, Data}) of
-                                        {ok,_Res} ->
-                                            do_parse_packet(Socket, Client);
-                                        {'EXIT',Reason} ->
-                                            do_lost(Socket, Client, Cmd, Reason)
+                    case BodyLen > 0 of
+                        true ->
+                            Ref1 = async_recv(Socket, BodyLen, ?TCP_TIMEOUT),
+                            receive
+                                {inet_async, Socket, Ref1, {ok, Binary}} ->
+                                    case limit_req_time(Cmd, Client) of
+                                        {ok, Client1} ->
+                                            case routing(Cmd, Binary) of
+                                                %%这里是处理游戏逻辑
+                                                {ok, Data} ->
+                                                    case catch gen:call(Client1#player.pid, '$gen_call', {'SOCKET_EVENT', Cmd, Data}) of
+                                                        {ok,_Res} ->
+                                                            do_parse_packet(Socket, Client1);
+                                                        {'EXIT',Reason} ->
+                                                            do_lost(Socket, Client1, Cmd, Reason)
+                                                    end;
+                                                _ ->
+                                                    do_parse_packet(Socket, Client1)
+                                            end;
+                                        {false, Client1} -> %% 发送次数太多忽略不处理
+                                            do_parse_packet(Socket, Client1)
                                     end;
-                                    %F1 = fun() -> gen_server:call(Client#client.player, {'SOCKET_EVENT', Cmd, Data}) end,
-                                    %run(Cmd, Data, F1),
-                                    %do_parse_packet(Socket, Client);
                                 Other ->
                                     do_lost(Socket, Client, Cmd, Other)
                             end;
-                        Other ->
-                            do_lost(Socket, Client, Cmd, Other)
+                        false ->
+                            case limit_req_time(Cmd, Client) of
+                                {ok, Client1} ->
+                                    case routing(Cmd, <<>>) of
+                                        %%这里是处理游戏逻辑
+                                        {ok, Data} ->
+                                            case catch gen:call(Client1#player.pid, '$gen_call', {'SOCKET_EVENT', Cmd, Data}) of
+                                                {ok,_Res} ->
+                                                    do_parse_packet(Socket, Client1);
+                                                {'EXIT',Reason} ->
+                                                    do_lost(Socket, Client1, Cmd, Reason)
+                                            end;
+                                        _ ->
+                                            do_parse_packet(Socket, Client1)
+                                    end;
+                                {false, Client1} -> %% 发送次数太多忽略不处理
+                                    do_parse_packet(Socket, Client1)
+                            end
                     end;
                 false ->
-                    case routing(Cmd, <<>>) of
-                        %%这里是处理游戏逻辑
-                        {ok, Data} ->
-                            case catch gen:call(Client#client.player, '$gen_call', {'SOCKET_EVENT', Cmd, Data}, 3000) of
-                                {ok,_Res} ->
-                                    do_parse_packet(Socket, Client);
-                                {'EXIT',Reason} ->
-                                    do_lost(Socket, Client, Cmd, Reason)
-                            end;
-                        Other ->
-                            do_lost(Socket, Client, Cmd, Other)
-                    end
+                    do_lost(Socket, Client, Cmd, "proto error")
             end;
 
         %%超时处理
         {inet_async, Socket, Ref, {error,timeout}} ->
-            case Client#client.timeout >= ?HEART_TIMEOUT_TIME of
+            case Client#player.timeout >= ?HEART_TIMEOUT_TIME of
                 true ->
                     do_lost(Socket, Client, 0, {error,timeout});
                 false ->
-                    do_parse_packet(Socket, Client#client {timeout = Client#client.timeout+1})            
+                    do_parse_packet(Socket, Client#player {timeout = Client#player.timeout+1})
             end;
 
         %%用户断开连接或出错
@@ -352,33 +197,38 @@ do_parse_packet(Socket, Client) ->
             do_lost(Socket, Client, 0, Other)
     end.
 
+%%断开连接
+login_lost(Socket, _Client, _Cmd, Reason) ->
+    gen_tcp:close(Socket),
+    exit({unexpected_message, Reason}).
+
+%%退出游戏
+do_lost(_Socket, Client, _Cmd, Reason) ->
+    %log("======~p===~p=====~n", [_Cmd, Reason]),
+    %io:format("======~p===~p=====~n", [_Cmd, Reason]),
+    mod_login:logout(Client#player.pid),
+    exit({unexpected_message, Reason}).
 
 %%============================================
 %%公共函数
 %%============================================
 
-%%断开连接
-login_lost(Socket, Client, _Cmd, Reason) ->
-    case is_pid(Client#client.player) of 
-        true ->
-            mod_login:logout(Client#client.player);
-        false ->
-            gen_tcp:close(Socket)
-    end,
-    exit({unexpected_message, Reason}).
-
-%%退出游戏
-do_lost(_Socket, Client, _Cmd, Reason) ->
-    mod_login:logout(Client#client.player),
-    exit({unexpected_message, Reason}).
-
 %%路由
-%%组成如:pt_10:read
 routing(Cmd, Binary) ->
+    %%-----------
+    %% 旧的代码：使用自定义二进制流
     %%取前面二位区分功能类型
-    [H1, H2, _, _, _] = integer_to_list(Cmd),
-    Module = list_to_atom("pt_"++[H1,H2]),
-    Module:read(Cmd, Binary).
+    %[H1, H2, H3, _, _] = integer_to_list(Cmd),
+    %Module = list_to_atom("pt_"++[H1,H2,H3]),
+    %Module:read(Cmd, Binary). % 不容错了，发错协议就断开
+    %catch Module:read(Cmd, Binary).
+    %%-----------
+    %% 使用protobuf
+    [H1,H2,H3,H4,H5 | _] = integer_to_list(Cmd),
+    Module = list_to_atom([$p,$t,H1,H2,H3,$_,$p,$b]), % atom = pt123_pb
+    RecordName = list_to_atom([$p,$t,H1,H2,H3,H4,H5,$_,$t,$o,$s]), % atom = decode_pt12345_toc
+    RecordData = Module:decode(RecordName, Binary),
+    {ok, RecordData}.
 
 %% 接受信息
 async_recv(Sock, Length, Timeout) when is_port(Sock) ->
@@ -423,14 +273,77 @@ run(Cmd, Data, Fun) ->
 
 %% 日志记录函数
 log(F, A) ->
-    F3 = case get("file") of
+    case get("prof") of
         undefined ->
-            {ok, Fl} = file:open("logs/prof.txt", [write, append]),
-            put("file", Fl),
-            Fl;
+            {ok, Fl} = file:open("../logs/prof.txt", [write, append]),
+            put("prof", Fl),
+            F3 = Fl;
         F2 ->
-            F2
+            F3 = F2
     end,
-    Format = list_to_binary(F ++ "\n~n"),
-    io:format(F3, unicode:characters_to_list(Format), A).
-    %file:close(Fl).
+    {{Y, M, D},{H, I, S}} = erlang:localtime(),
+    Format = list_to_binary("#prof" ++ " ~s \r\n" ++ F ++ "\r\n~n"),
+    Date = list_to_binary([integer_to_list(Y),"-", integer_to_list(M), "-", integer_to_list(D), " ", integer_to_list(H), ":", integer_to_list(I), ":", integer_to_list(S)]),
+    io:format(F3, unicode:characters_to_list(Format), [Date] ++ A).
+
+%% 限制请求次数
+limit_req_time(Cmd, Client) ->
+    List = case lists:keyfind(Cmd, 1, Client#player.req_list) of
+        false ->
+            Client#player.req_list ++ [{Cmd, 1}];
+        {_, _V} ->
+            lists:keydelete(Cmd, 1, Client#player.req_list) ++ [{Cmd, _V+1}]
+    end,
+    Time = util:unixtime(),
+    Count = Client#player.req_count + 1,
+    case Count > ?LIMITE_REQUEST of
+        true ->
+            case Time - Client#player.req_time > 0 of
+                true ->
+                    {ok, Client#player{req_time = Time, req_count = 0, req_list=[]}};
+                false ->
+                    {false, Client#player{req_count = Count, req_list = List}}
+            end;
+        false ->
+            case Time - Client#player.req_time > 0 of
+                true ->
+                    {ok, Client#player{req_time = Time, req_count = 0, req_list=[]}};
+                false ->
+                    case is_over_proto(List, Client#player.accname) of
+                        true ->
+                            {false, Client#player{req_count = Count, req_list = List}};
+                        lose -> %%断线处理
+                            do_lost(Client#player.socket, Client, Cmd, 0),
+                            {false, Client#player{req_count = Count, req_list = List}};
+                        false ->
+                            {ok, Client#player{req_count = Count, req_list = List}}
+                    end
+            end
+    end.
+
+%% 是否发多次协议
+is_over_proto([], _) ->
+    false;
+is_over_proto([{_Cmd, V} | T], Accname) ->
+    if
+        V > 14 ->
+            true;
+        true ->
+            is_over_proto(T, Accname)
+    end.
+
+%%测试服用
+%is_over_proto([], _) ->
+%    false;
+%is_over_proto([{Cmd, V} | T], Accname) ->
+%    if
+%        Cmd =:= 12001 ->
+%            is_over_proto(T, Accname);
+%        V > 14 ->
+%            log("-cmd:~p, times:~p,acc:~p~n", [Cmd, V, Accname]),
+%            lose;
+%        true ->
+%            is_over_proto(T, Accname)
+%    end.
+
+
