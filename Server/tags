@@ -1,0 +1,768 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+#navbar_bottom	.\config\src\doc\overview-summary.html	/^<div class="navbar"><a name="#navbar_bottom"><\/a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview<\/a><\/td><td><a href="http:\/\/www.erlang.org\/"><img src="erlang.png" align="right" border="0" alt="erlang logo"><\/a><\/td><\/tr><\/table><\/div>$/;"	a
+#navbar_top	.\config\src\doc\overview-summary.html	/^<div class="navbar"><a name="#navbar_top"><\/a><table width="100%" border="0" cellspacing="0" cellpadding="2" summary="navigation bar"><tr><td><a href="overview-summary.html" target="overviewFrame">Overview<\/a><\/td><td><a href="http:\/\/www.erlang.org\/"><img src="erlang.png" align="right" border="0" alt="erlang logo"><\/a><\/td><\/tr><\/table><\/div>$/;"	a
+ACHIEVED_NAME	.\include\common.hrl	/^-define(ACHIEVED_NAME, achieved_name).                          %% 称号数据$/;"	d
+ACTIVITY_DAY_GIFT_MEMBER	.\include\common.hrl	/^-define(ACTIVITY_DAY_GIFT_MEMBER,           3).             %% 会员礼包$/;"	d
+ACTIVITY_DAY_GIFT_OPEN_PAY	.\include\common.hrl	/^-define(ACTIVITY_DAY_GIFT_OPEN_PAY,         7).             %% 开服充值礼包回馈$/;"	d
+ACTIVITY_DAY_MERGED	.\include\common.hrl	/^-define(ACTIVITY_DAY_MERGED,                7).             %% 合服7天活动$/;"	d
+ACTIVITY_DAY_NEW_GAME	.\include\common.hrl	/^-define(ACTIVITY_DAY_NEW_GAME,              7).             %% 新服7天活动$/;"	d
+ACTIVITY_DAY_OPEN_PAY	.\include\common.hrl	/^-define(ACTIVITY_DAY_OPEN_PAY,              7).             %% 开服充值返还$/;"	d
+ACTIVITY_DAY_POINT_OPEN_PAY	.\include\common.hrl	/^-define(ACTIVITY_DAY_POINT_OPEN_PAY,        7).             %% 积分开服充值返利$/;"	d
+ACTIVITY_DAY_SHOP_LIMIT_OPEN	.\include\common.hrl	/^-define(ACTIVITY_DAY_SHOP_LIMIT_OPEN,       7).             %% 开服限时抢购$/;"	d
+ACTIVITY_DAY_SHOP_POINT_OPEN	.\include\common.hrl	/^-define(ACTIVITY_DAY_SHOP_POINT_OPEN,       7).             %% 开服积分商城$/;"	d
+ALL_BROADCAST_MAP_LIST	.\include\common.hrl	/^-define(ALL_BROADCAST_MAP_LIST, [228, 120, 121]).     %% 姻缘厅$/;"	d
+ALL_SERVER_PLAYERS	.\include\common.hrl	/^-define(ALL_SERVER_PLAYERS, 10000).$/;"	d
+ALTAR_BLUE	.\include\common.hrl	/^-define(ALTAR_BLUE,  23402). %蓝色祭坛 【归属二队】$/;"	d
+ALTAR_POS	.\include\common.hrl	/^-define(ALTAR_POS, [{39,28}, {25,42}, {7,60}]).$/;"	d
+ALTAR_PSS_ICE	.\include\common.hrl	/^-define(ALTAR_PSS_ICE, [{27, 8}, {9, 39}, {41, 39}]).$/;"	d
+ALTAR_RED	.\include\common.hrl	/^-define(ALTAR_RED,   23403). %红色祭坛 【归属一队】$/;"	d
+ALTAR_WHITE	.\include\common.hrl	/^-define(ALTAR_WHITE, 23401). %白色祭坛 【无归属】$/;"	d
+APPLY_SWORN_INFO	.\include\common.hrl	/^-define(APPLY_SWORN_INFO, apply_sworn_info).                    %% 结拜申请信息$/;"	d
+BATTLE_DATA_TYPE_KFZ_ACTIVITY_RANK_UPDATA	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_ACTIVITY_RANK_UPDATA, 4).  %% 风云榜数据更新(跨服2)$/;"	d
+BATTLE_DATA_TYPE_KFZ_ACTIVITY_RANK_UPLOAD	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_ACTIVITY_RANK_UPLOAD, 5).  %% 风云榜数据上传(跨服2)$/;"	d
+BATTLE_DATA_TYPE_KFZ_FIRST_HONOR_UPLOAD	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_FIRST_HONOR_UPLOAD,   6).  %% 远征荣誉榜上传(跨服2)$/;"	d
+BATTLE_DATA_TYPE_KFZ_MONUMENT_DEVOTE	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_MONUMENT_DEVOTE, 1).   %% 纪念碑贡献建设$/;"	d
+BATTLE_DATA_TYPE_KFZ_MONUMENT_QUERY	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_MONUMENT_QUERY,  2).   %% 纪念碑查询$/;"	d
+BATTLE_DATA_TYPE_KFZ_MONUMENT_SYNC	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_MONUMENT_SYNC,   3).   %% 纪念碑数据同步$/;"	d
+BATTLE_DATA_TYPE_KFZ_RANK_UPDATE	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_RANK_UPDATE,          1).  %% 跨服榜数据更新(跨服1)$/;"	d
+BATTLE_DATA_TYPE_KFZ_RANK_UPLOAD	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_RANK_UPLOAD,          3).  %% 跨服榜数据上传(跨服1)$/;"	d
+BATTLE_DATA_TYPE_KFZ_ROLE_LOGIN	.\include\cluster.hrl	/^-define(BATTLE_DATA_TYPE_KFZ_ROLE_LOGIN,           2).  %% 名人堂玩家登录(跨服1)$/;"	d
+BATTLE_TYPE_KFZ_3V3	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_3V3,            3).$/;"	d
+BATTLE_TYPE_KFZ_ACTIVITY_RANK	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_ACTIVITY_RANK, 15).$/;"	d
+BATTLE_TYPE_KFZ_ALLIANCE	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_ALLIANCE,      13).$/;"	d
+BATTLE_TYPE_KFZ_ALLIANCE1	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_ALLIANCE1,     14).$/;"	d
+BATTLE_TYPE_KFZ_ARENA	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_ARENA,          2).$/;"	d
+BATTLE_TYPE_KFZ_BOSS	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_BOSS,           9).$/;"	d
+BATTLE_TYPE_KFZ_CHAT	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_CHAT,           6).$/;"	d
+BATTLE_TYPE_KFZ_COUNTRY_TREASURE	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_COUNTRY_TREASURE, 17).  %% 国家宝藏$/;"	d
+BATTLE_TYPE_KFZ_FLOWER	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_FLOWER,         8).$/;"	d
+BATTLE_TYPE_KFZ_FRIEND	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_FRIEND,         1).$/;"	d
+BATTLE_TYPE_KFZ_LEAGUE	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_LEAGUE,        10).$/;"	d
+BATTLE_TYPE_KFZ_LEAGUE1	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_LEAGUE1,       11).$/;"	d
+BATTLE_TYPE_KFZ_MAIL	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_MAIL,           7).$/;"	d
+BATTLE_TYPE_KFZ_MONUMENT	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_MONUMENT,      12).$/;"	d
+BATTLE_TYPE_KFZ_QUIZ	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_QUIZ,          16).     %% 跨服文举赛$/;"	d
+BATTLE_TYPE_KFZ_RANK	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_RANK,           4).$/;"	d
+BATTLE_TYPE_KFZ_RPC	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_RPC,           18).     %% 跨服远程调用$/;"	d
+BATTLE_TYPE_KFZ_STAR	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_STAR,          20).     %% 跨服天梯明星赛$/;"	d
+BATTLE_TYPE_KFZ_TEAM_RANK	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_TEAM_RANK,      5).$/;"	d
+BATTLE_TYPE_KFZ_TERRITORY	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_TERRITORY,     21).     %% 跨服领土战$/;"	d
+BATTLE_TYPE_KFZ_WAR	.\include\cluster.hrl	/^-define(BATTLE_TYPE_KFZ_WAR,           19).     %% 跨服国战$/;"	d
+BATTLE_TYPE_PRIVILEGE	.\include\cluster.hrl	/^-define(BATTLE_TYPE_PRIVILEGE,         22).     %% 国战官职特权$/;"	d
+BEFORE_LINE	.\include\common.hrl	/^-define(BEFORE_LINE, before_line).                              %% 先前线路$/;"	d
+BLESS_CARD	.\include\common.hrl	/^-define(BLESS_CARD, bless_card).                                %% 祝福贺卡$/;"	d
+BLUE_GUILDER	.\include\common.hrl	/^-define(BLUE_GUILDER, 23404).%复活点守护-蓝$/;"	d
+BLUE_REBORN	.\include\common.hrl	/^-define(BLUE_REBORN, [37,54]).$/;"	d
+BLUE_REBORN_ICE	.\include\common.hrl	/^-define(BLUE_REBORN_ICE, [43,16]).$/;"	d
+BOSS	.\include\common.hrl	/^-define(BOSS, [99501,22043,98908,99008,30046,50045,60046,40046,60047,70023,98909,70046]).$/;"	d
+CANDY_TYPE_ID	.\include\common.hrl	/^-define(CANDY_TYPE_ID, 624527).        %% 糖果物品类型ID$/;"	d
+CHAT_OTHER	.\include\common.hrl	/^-define(CHAT_OTHER, 3).$/;"	d
+CHAT_WORLD	.\include\common.hrl	/^-define(CHAT_WORLD, 8).$/;"	d
+CHECK_CONNECT_INTERVAL	.\include\cluster.hrl	/^-define(CHECK_CONNECT_INTERVAL,     30).$/;"	d
+CLOCK	.\src\mod\common\mod_time.erl	/^-define(CLOCK, 100).$/;"	d
+CLUSTER_HEADER_LEN	.\include\cluster.hrl	/^-define(CLUSTER_HEADER_LEN,         8).$/;"	d
+CONNECT_INVALID_INTERVAL	.\include\cluster.hrl	/^-define(CONNECT_INVALID_INTERVAL,   45).$/;"	d
+COUPLE_HOME	.\include\common.hrl	/^-define(COUPLE_HOME, couple_home).                              %% 夫妻家园$/;"	d
+COUPLE_INSURE	.\include\common.hrl	/^-define(COUPLE_INSURE, couple_insure).                          %% 爱情保险$/;"	d
+CURRENT_CRUISE	.\include\common.hrl	/^-define(CURRENT_CRUISE, current_cruise).                        %% 当前巡游队伍$/;"	d
+CURRENT_WEDDING	.\include\common.hrl	/^-define(CURRENT_WEDDING, current_wedding).                      %% 当前婚宴记录$/;"	d
+DB	.\include\common.hrl	/^-define(DB, sd_mysql_conn).$/;"	d
+DEBUG	.\include\common.hrl	/^-define(DEBUG(F, A), util:log("debug", F, A, ?MODULE, ?LINE)).$/;"	d
+DIFF_SECONDS_0000_1900	.\include\common.hrl	/^-define(DIFF_SECONDS_0000_1900, 62167219200).$/;"	d
+DIFF_SECONDS_1970_1900	.\include\common.hrl	/^-define(DIFF_SECONDS_1970_1900, 2208988800).$/;"	d
+ERR	.\include\common.hrl	/^-define(ERR(F, A), util:log("error", F, A, ?MODULE, ?LINE)).$/;"	d
+ETS_ACTIVITY	.\include\common.hrl	/^-define(ETS_ACTIVITY, ets_activity).                            %% 玩家活动信息$/;"	d
+ETS_AI	.\include\common.hrl	/^-define(ETS_AI, ets_ai).                                        %% ai用$/;"	d
+ETS_ANQI	.\include\common.hrl	/^-define(ETS_ANQI, ets_anqi).                                    %% 暗器$/;"	d
+ETS_APPOINTMENT	.\include\common.hrl	/^-define(ETS_APPOINTMENT, ets_appointment).                      %% 仙侣奇缘$/;"	d
+ETS_APPOINTMENT_CONFIG	.\include\common.hrl	/^-define(ETS_APPOINTMENT_CONFIG, ets_appointment_config).        %% 仙侣奇缘设置$/;"	d
+ETS_APPOINTMENT_DUNGEON	.\include\common.hrl	/^-define(ETS_APPOINTMENT_DUNGEON, ets_appointment_dungeon).      %% 情缘副本$/;"	d
+ETS_APPOINTMENT_SPECIAL_SUBJECT	.\include\common.hrl	/^-define(ETS_APPOINTMENT_SPECIAL_SUBJECT, ets_appointment_special_subject). %% 仙侣奇缘特殊题目$/;"	d
+ETS_APPOINTMENT_SUBJECT	.\include\common.hrl	/^-define(ETS_APPOINTMENT_SUBJECT, ets_appointment_subject).      %% 仙侣奇缘题目$/;"	d
+ETS_ARENA	.\include\common.hrl	/^-define(ETS_ARENA,             ets_arena).                      %% 竞技场.$/;"	d
+ETS_ARENA_RESULT	.\include\common.hrl	/^-define(ETS_ARENA_RESULT,      ets_arena_result).               %% 竞技场结果$/;"	d
+ETS_ARENA_SCENE	.\include\common.hrl	/^-define(ETS_ARENA_SCENE,       ets_arena_scene).                %% 竞技场场景$/;"	d
+ETS_ARENA_STATE_INFO	.\include\common.hrl	/^-define(ETS_ARENA_STATE_INFO,  ets_arena_state_info).           %% 竞技场状态信息.$/;"	d
+ETS_BAIKE	.\include\common.hrl	/^-define(ETS_BAIKE, ets_baike). % 玩家招纳的百科数据$/;"	d
+ETS_BASE_BAIKE	.\include\common.hrl	/^-define(ETS_BASE_BAIKE, ets_base_baike). % 玩家基本百科数据$/;"	d
+ETS_BASE_GOODS_PET	.\include\common.hrl	/^-define(ETS_BASE_GOODS_PET,    ets_base_goods_pet).             %% 宠物物品配置$/;"	d
+ETS_BASE_GUILD_BATTLE_AWARD	.\include\common.hrl	/^-define(ETS_BASE_GUILD_BATTLE_AWARD,ets_base_guild_battle_award).       %% 帮战奖励物品配置$/;"	d
+ETS_BASE_PET_MANUAL	.\include\common.hrl	/^-define(ETS_BASE_PET_MANUAL,   ets_base_pet_manual).            %% 宠物图鉴配置$/;"	d
+ETS_BASE_SIEGE_BATTLE_AWARD	.\include\common.hrl	/^-define(ETS_BASE_SIEGE_BATTLE_AWARD,ets_base_siege_battle_award).       %% 攻城战奖励物品配置$/;"	d
+ETS_BLESS_BOX	.\include\common.hrl	/^-define(ETS_BLESS_BOX, ets_bless_box).                          %% 玩家祈福宝箱$/;"	d
+ETS_BOX_COUNTER	.\include\common.hrl	/^-define(ETS_BOX_COUNTER, ets_box_counter).                      %% 宝箱全局计数$/;"	d
+ETS_BOX_PLAYER_COUNTER	.\include\common.hrl	/^-define(ETS_BOX_PLAYER_COUNTER, ets_box_player_counter).        %% 宝箱单玩家计数$/;"	d
+ETS_BUFF	.\include\common.hrl	/^-define(ETS_BUFF, ets_buff).                                    %% 玩家BUFF状态$/;"	d
+ETS_BUFF_WATAR	.\include\common.hrl	/^-define(ETS_BUFF_WATAR, ets_buff_watar).                        %% 温泉$/;"	d
+ETS_CAPTCHA	.\include\common.hrl	/^-define(ETS_CAPTCHA, ets_captcha).                              %% 验证码$/;"	d
+ETS_CHANGE_LINE	.\include\common.hrl	/^-define(ETS_CHANGE_LINE, ets_change_line).                      %% 换线排队管理$/;"	d
+ETS_CHANGE_LINE_INFO_TEAM	.\include\common.hrl	/^-define(ETS_CHANGE_LINE_INFO_TEAM, ets_change_line_into_team).  % 玩家切线进入队伍$/;"	d
+ETS_CHAT	.\include\common.hrl	/^-define(ETS_CHAT, ets_chat).                                    %% 聊天$/;"	d
+ETS_CHAT_WARRIOR_BAN	.\include\common.hrl	/^-define(ETS_CHAT_WARRIOR_BAN, ets_chat_warrior_ban).$/;"	d
+ETS_CHENGJIU	.\include\common.hrl	/^-define(ETS_CHENGJIU, ets_chengjiu).                            %% 成就列表$/;"	d
+ETS_CHENGJIU_AWARD	.\include\common.hrl	/^-define(ETS_CHENGJIU_AWARD, ets_chengjiu_award).                %% 成就奖励列表$/;"	d
+ETS_CLUSTER	.\include\cluster.hrl	/^-define(ETS_CLUSTER,                ets_cluster).$/;"	d
+ETS_CLUSTER_NODE	.\include\cluster.hrl	/^-define(ETS_CLUSTER_NODE,           ets_cluster_node).$/;"	d
+ETS_COIN_DUNGEON	.\include\common.hrl	/^-define(ETS_COIN_DUNGEON, ets_coin_dungeon).                    %% 新版钱多多副本记录$/;"	d
+ETS_COIN_RANK	.\include\common.hrl	/^-define(ETS_COIN_RANK, ets_coin_rank).                          %% 新版钱多多排行榜$/;"	d
+ETS_COLLECTOR	.\include\common.hrl	/^-define(ETS_COLLECTOR, ets_collector).                          %% 采矿$/;"	d
+ETS_COUNTER	.\include\common.hrl	/^-define(ETS_COUNTER, ets_counter).                              %% ETS计数器$/;"	d
+ETS_COUNTRY	.\include\common.hrl	/^-define(ETS_COUNTRY, ets_country).                              %% 国家$/;"	d
+ETS_COUPLE	.\include\common.hrl	/^-define(ETS_COUPLE, ets_couple).                                %% 夫妻$/;"	d
+ETS_COUPLE_LOVE_LIFE	.\include\common.hrl	/^-define(ETS_COUPLE_LOVE_LIFE, ets_couple_love_life).            %% 钟爱一生夫妻信息$/;"	d
+ETS_COUPLE_RING	.\include\common.hrl	/^-define(ETS_COUPLE_RING, ets_couple_ring).                      %% 婚戒礼盒$/;"	d
+ETS_COUPLE_RING_LIMIT	.\include\common.hrl	/^-define(ETS_COUPLE_RING_LIMIT, ets_couple_ring_limit).          %% 婚戒礼盒限制$/;"	d
+ETS_COUPLE_SIGN	.\include\common.hrl	/^-define(ETS_COUPLE_SIGN, ets_couple_sign).                      %% 夫妻签到$/;"	d
+ETS_DAILY	.\include\common.hrl	/^-define(ETS_DAILY, ets_daily).                                  %% 每天记录器$/;"	d
+ETS_DOUBT_ACCOUNT	.\include\common.hrl	/^-define(ETS_DOUBT_ACCOUNT, ets_doubt_account).                  %% 小号管理$/;"	d
+ETS_DROP	.\include\common.hrl	/^-define(ETS_DROP, ets_goods_drop).                              %% 物品掉落表$/;"	d
+ETS_DROP_FACTOR	.\include\common.hrl	/^-define(ETS_DROP_FACTOR, ets_drop_factor).                      %% 物品掉落系数$/;"	d
+ETS_DUNGEON_ENLIST	.\include\common.hrl	/^-define(ETS_DUNGEON_ENLIST, ets_dungeon_enlist).                %% 副本招募$/;"	d
+ETS_DUNGEON_ENLIST2	.\include\common.hrl	/^-define(ETS_DUNGEON_ENLIST2, ets_dungeon_enlist2).              %% 副本招募2$/;"	d
+ETS_EVER_NAME	.\include\common.hrl	/^-define(ETS_EVER_NAME, ets_ever_name).$/;"	d
+ETS_FALLING_STONE	.\include\common.hrl	/^-define(ETS_FALLING_STONE, ets_falling_stone).                  %% 天外来石$/;"	d
+ETS_FASHION_FIGURE	.\include\common.hrl	/^-define(ETS_FASHION_FIGURE, ets_fashion_figure).            %% 玩家已激活时装形象记录$/;"	d
+ETS_FIGURE	.\include\common.hrl	/^-define(ETS_FIGURE, ets_figure).                                %% 变身形象$/;"	d
+ETS_FIRE_WOOD	.\include\common.hrl	/^-define(ETS_FIRE_WOOD, ets_fire_wood).                          %% 篝火木材$/;"	d
+ETS_FLAG_BATTLE	.\include\common.hrl	/^-define(ETS_FLAG_BATTLE, ets_flag_battle).                      %% 夺旗战数据ETS$/;"	d
+ETS_FLAG_BATTLE_BUFF	.\include\common.hrl	/^-define(ETS_FLAG_BATTLE_BUFF, ets_flag_battle_buff).            %% 夺旗战数据ETS$/;"	d
+ETS_FLAG_BATTLE_MON	.\include\common.hrl	/^-define(ETS_FLAG_BATTLE_MON, ets_flag_battle_mon).              %% 夺旗战怪物管理$/;"	d
+ETS_FLAG_BATTLE_WIN_GUILD	.\include\common.hrl	/^-define(ETS_FLAG_BATTLE_WIN_GUILD ,ets_flag_battle_win_guild).  %% 夺旗战胜利方管理$/;"	d
+ETS_FORTUNE	.\include\common.hrl	/^-define(ETS_FORTUNE, ets_fortune).                              %% 玩家运势表$/;"	d
+ETS_FORTUNE_LOG	.\include\common.hrl	/^-define(ETS_FORTUNE_LOG, ets_fortune_log).                      %% 玩家运势刷新日志$/;"	d
+ETS_GIFT	.\include\common.hrl	/^-define(ETS_GIFT, ets_gift2).                                   %% 活动礼包$/;"	d
+ETS_GOODS_ONLINE	.\include\common.hrl	/^-define(ETS_GOODS_ONLINE, ets_goods_online).                    %% 在线玩家的背包物品表$/;"	d
+ETS_GRAB_STONE_RESULT	.\include\common.hrl	/^-define(ETS_GRAB_STONE_RESULT,      ets_grab_stone_result).     %% 宝石试炼结果$/;"	d
+ETS_GRAB_STONE_STATE_INFO	.\include\common.hrl	/^-define(ETS_GRAB_STONE_STATE_INFO,  ets_grab_stone_state_info). %% 宝石试炼状态信息.$/;"	d
+ETS_GUILD	.\include\common.hrl	/^-define(ETS_GUILD,             ets_guild).                      %% 帮派$/;"	d
+ETS_GUILDBOSSMGR	.\include\common.hrl	/^-define(ETS_GUILDBOSSMGR, ets_guildbossmgr).                    %% 跨服战3v3次数$/;"	d
+ETS_GUILD_APPLY	.\include\common.hrl	/^-define(ETS_GUILD_APPLY,       ets_guild_apply).                %% 帮派申请$/;"	d
+ETS_GUILD_AWARD	.\include\common.hrl	/^-define(ETS_GUILD_AWARD,       ets_guild_award).                %% 帮派奖励物品表$/;"	d
+ETS_GUILD_AWARD_ALLOC	.\include\common.hrl	/^-define(ETS_GUILD_AWARD_ALLOC, ets_guild_award_alloc).          %% 帮派奖励分配表$/;"	d
+ETS_GUILD_BATTLE_MEMBER_INFO	.\include\common.hrl	/^-define(ETS_GUILD_BATTLE_MEMBER_INFO, ets_guild_battle_member_info).    %% 帮战成员$/;"	d
+ETS_GUILD_BATTLE_MEMBER_RESULT	.\include\common.hrl	/^-define(ETS_GUILD_BATTLE_MEMBER_RESULT,ets_guild_battle_member_result). %% 帮战成员结果$/;"	d
+ETS_GUILD_BATTLE_RESULT	.\include\common.hrl	/^-define(ETS_GUILD_BATTLE_RESULT,ets_guild_battle_result).       %% 帮战结果$/;"	d
+ETS_GUILD_BATTLE_SCENE	.\include\common.hrl	/^-define(ETS_GUILD_BATTLE_SCENE,ets_guild_battle_scene).         %% 帮战场景$/;"	d
+ETS_GUILD_BATTLE_STATE_INFO	.\include\common.hrl	/^-define(ETS_GUILD_BATTLE_STATE_INFO,ets_guild_battle_state_info).%% 帮战状态信息$/;"	d
+ETS_GUILD_EXCLUSIVE	.\include\common.hrl	/^-define(ETS_GUILD_EXCLUSIVE,   ets_guild_exclusive).            %% 帮派（线路独占信息）$/;"	d
+ETS_GUILD_INVITE	.\include\common.hrl	/^-define(ETS_GUILD_INVITE,      ets_guild_invite).               %% 帮派邀请$/;"	d
+ETS_GUILD_MEMBER	.\include\common.hrl	/^-define(ETS_GUILD_MEMBER,      ets_guild_member).               %% 帮派成员$/;"	d
+ETS_GUILD_MEMBER_AWARD	.\include\common.hrl	/^-define(ETS_GUILD_MEMBER_AWARD,ets_guild_member_award).         %% 帮派成员奖励物品表$/;"	d
+ETS_GUILD_MEMBER_SKILL	.\include\common.hrl	/^-define(ETS_GUILD_MEMBER_SKILL, ets_guild_member_skill).        %% 帮派个人技能$/;"	d
+ETS_GUILD_SKILL	.\include\common.hrl	/^-define(ETS_GUILD_SKILL, ets_guild_skill).                      %% 帮派技能$/;"	d
+ETS_HAGNER	.\include\common.hrl	/^-define(ETS_HAGNER, ets_hanger). % 玩家招纳的门客数据 $/;"	d
+ETS_HAPPY_BAG	.\include\common.hrl	/^-define(ETS_HAPPY_BAG, ets_happy_bag).                          %% 玩家福袋$/;"	d
+ETS_HORN_MSG	.\include\common.hrl	/^-define(ETS_HORN_MSG, ets_horn_msg).                            %% 聊天小喇叭消息$/;"	d
+ETS_HP_BAG	.\include\common.hrl	/^-define(ETS_HP_BAG, ets_hp_bag).                                %% 玩家血包ETS$/;"	d
+ETS_IP_LIMIT	.\include\common.hrl	/^-define(ETS_IP_LIMIT, ets_ip_limit).                            %% IP黑名单$/;"	d
+ETS_JEWEL_BATTLE_RESULT	.\include\common.hrl	/^-define(ETS_JEWEL_BATTLE_RESULT, ets_jewel_battle_result).        %% 宝石战场结果$/;"	d
+ETS_JEWEL_BATTLE_SCENE	.\include\common.hrl	/^-define(ETS_JEWEL_BATTLE_SCENE, ets_jewel_battle_scene).        %% 宝石战场场景$/;"	d
+ETS_JEWEL_BATTLE_STATE_INFO	.\include\common.hrl	/^-define(ETS_JEWEL_BATTLE_STATE_INFO,  ets_jewel_battle_state_info).  %% 宝石战场状态信息$/;"	d
+ETS_KFZ_3V3_RESULT	.\include\common.hrl	/^-define(ETS_KFZ_3V3_RESULT,    ets_kfz_3v3_result).             %% 跨服3v3结果$/;"	d
+ETS_KFZ_3V3_SCENE	.\include\common.hrl	/^-define(ETS_KFZ_3V3_SCENE, ets_kfz_3v3_scene).                  %% 跨服战3v3场景表$/;"	d
+ETS_KFZ_3V3_TIMES	.\include\common.hrl	/^-define(ETS_KFZ_3V3_TIMES, ets_kfz_3v3_times).                  %% 跨服战3v3次数$/;"	d
+ETS_KFZ_ALLIANCE_LOG	.\include\common.hrl	/^-define(ETS_KFZ_ALLIANCE_LOG,    ets_kfz_alliance_log).         %% 跨服天梯排位赛日志$/;"	d
+ETS_KFZ_ALLIANCE_RANK	.\include\common.hrl	/^-define(ETS_KFZ_ALLIANCE_RANK,   ets_kfz_alliance_rank).        %% 跨服天梯排位赛排行$/;"	d
+ETS_KFZ_ALLIANCE_RESULT	.\include\common.hrl	/^-define(ETS_KFZ_ALLIANCE_RESULT, ets_kfz_alliance_result).      %% 跨服天梯排位赛结果$/;"	d
+ETS_KFZ_ALLIANCE_SCENE	.\include\common.hrl	/^-define(ETS_KFZ_ALLIANCE_SCENE,  ets_kfz_alliance_scene).       %% 跨服天梯排位赛场景$/;"	d
+ETS_KFZ_ALLIANCE_STATE	.\include\common.hrl	/^-define(ETS_KFZ_ALLIANCE_STATE,  ets_kfz_alliance_state).       %% 跨服天梯排位赛状态$/;"	d
+ETS_KFZ_ARENA	.\include\common.hrl	/^-define(ETS_KFZ_ARENA,         ets_kfz_arena).                  %% 跨服擂台赛$/;"	d
+ETS_KFZ_ARENA_BATTLE	.\include\common.hrl	/^-define(ETS_KFZ_ARENA_BATTLE,  ets_kfz_arena_battle).           %% 跨服擂台赛战场$/;"	d
+ETS_KFZ_ARENA_RESULT	.\include\common.hrl	/^-define(ETS_KFZ_ARENA_RESULT,  ets_kfz_arena_result).           %% 跨服擂台赛结果$/;"	d
+ETS_KFZ_ARENA_SCENE	.\include\common.hrl	/^-define(ETS_KFZ_ARENA_SCENE,   ets_kfz_arena_scene).            %% 跨服擂台赛场景$/;"	d
+ETS_KFZ_BOSS_GUILD_RESULT	.\include\common.hrl	/^-define(ETS_KFZ_BOSS_GUILD_RESULT,ets_kfz_boss_guild_result).   %% 跨服BOSS帮派结果$/;"	d
+ETS_KFZ_BOSS_RESULT	.\include\common.hrl	/^-define(ETS_KFZ_BOSS_RESULT,    ets_kfz_boss_result).           %% 跨服BOSS玩家结果$/;"	d
+ETS_KFZ_BOSS_STATE_INFO	.\include\common.hrl	/^-define(ETS_KFZ_BOSS_STATE_INFO,ets_kfz_boss_state_info).       %% 跨服BOSS状态信息$/;"	d
+ETS_KFZ_ENEMY	.\include\common.hrl	/^-define(ETS_KFZ_ENEMY, ets_kfz_enemy).                          %% 跨服仇人$/;"	d
+ETS_KFZ_FRIEND	.\include\common.hrl	/^-define(ETS_KFZ_FRIEND,        ets_kfz_friend).                 %% 跨服好友$/;"	d
+ETS_KFZ_LEAGUE_RESULT	.\include\common.hrl	/^-define(ETS_KFZ_LEAGUE_RESULT, ets_kfz_league_result).          %% 跨服联赛结果$/;"	d
+ETS_KFZ_LEAGUE_SCENE	.\include\common.hrl	/^-define(ETS_KFZ_LEAGUE_SCENE,  ets_kfz_league_scene).           %% 跨服联赛场景$/;"	d
+ETS_KFZ_LEAGUE_STATE	.\include\common.hrl	/^-define(ETS_KFZ_LEAGUE_STATE,  ets_kfz_league_state).           %% 跨服联赛状态$/;"	d
+ETS_KFZ_LEAGUE_TEAM	.\include\common.hrl	/^-define(ETS_KFZ_LEAGUE_TEAM,   ets_kfz_league_team).            %% 跨服联赛队伍$/;"	d
+ETS_KFZ_LEAGUE_WATCH	.\include\common.hrl	/^-define(ETS_KFZ_LEAGUE_WATCH,  ets_kfz_league_watch).           %% 跨服联赛观赛$/;"	d
+ETS_KFZ_PLAYER	.\include\common.hrl	/^-define(ETS_KFZ_PLAYER,        ets_kfz_player).                 %% 跨服角色$/;"	d
+ETS_KFZ_TEAM	.\include\common.hrl	/^-define(ETS_KFZ_TEAM, ets_kfz_team).                            %% 跨服战队$/;"	d
+ETS_LODE	.\include\common.hrl	/^-define(ETS_LODE, ets_lode).                                    %% 矿脉$/;"	d
+ETS_LOGIN_COUNTER	.\include\common.hrl	/^-define(ETS_LOGIN_COUNTER, ets_login_counter).                  %% 连续登录及回归信息$/;"	d
+ETS_LOG_GUILD_DIAL	.\include\common.hrl	/^-define(ETS_LOG_GUILD_DIAL, ets_log_guild_dial). % 公共日志表$/;"	d
+ETS_LOG_GUILD_DIAL_PERSON	.\include\common.hrl	/^-define(ETS_LOG_GUILD_DIAL_PERSON, ets_log_guild_dial_person). % 个人日志表$/;"	d
+ETS_LOTTRY_LEIJI	.\include\common.hrl	/^-define(ETS_LOTTRY_LEIJI,ets_lottry_leiji).                     %% 累积池$/;"	d
+ETS_LOTTRY_LUCKER	.\include\common.hrl	/^-define(ETS_LOTTRY_LUCKER,ets_lottry_lucker).                   %% 中奖池$/;"	d
+ETS_LOTTRY_TARGET_DAY	.\include\common.hrl	/^-define(ETS_LOTTRY_TARGET_DAY, ets_lottry_target_day).          %% 彩票活跃度副本$/;"	d
+ETS_LOTTRY_TICK	.\include\common.hrl	/^-define(ETS_LOTTRY_TICK ,ets_lottry_tick).                      %% 彩票池$/;"	d
+ETS_MAIL	.\include\common.hrl	/^-define(ETS_MAIL, ets_mail).                                    %% 邮件$/;"	d
+ETS_MARRIAGE_EVENT	.\include\common.hrl	/^-define(ETS_MARRIAGE_EVENT, ets_marriage_event).                %% 婚姻记事$/;"	d
+ETS_MASTER	.\include\common.hrl	/^-define(ETS_MASTER,            ets_master).                     %% 师傅信息$/;"	d
+ETS_MASTER_APPRENTICE	.\include\common.hrl	/^-define(ETS_MASTER_APPRENTICE, ets_master_apprentice).          %% 师徒关系$/;"	d
+ETS_MERIDIAN_ATTRIBUTE	.\include\common.hrl	/^-define(ETS_MERIDIAN_ATTRIBUTE, ets_meridian_attribute).        %% 经脉属性表$/;"	d
+ETS_MON	.\include\common.hrl	/^-define(ETS_MON, ets_mon).                                      %% 怪物$/;"	d
+ETS_MONEY_TREE	.\include\common.hrl	/^-define(ETS_MONEY_TREE, ets_money_tree).                        %% 摇钱树$/;"	d
+ETS_MON_GOODS_COUNTER	.\include\common.hrl	/^-define(ETS_MON_GOODS_COUNTER, ets_mon_goods_counter).          %% 怪物掉落物品计数器$/;"	d
+ETS_MON_TMP	.\include\common.hrl	/^-define(ETS_MON_TMP, ets_mon_tmp).                              %% 怪物临时表$/;"	d
+ETS_MOUNT	.\include\common.hrl	/^-define(ETS_MOUNT, ets_mount).                                  %% 坐骑信息$/;"	d
+ETS_MOUNT_EQUIP	.\include\common.hrl	/^-define(ETS_MOUNT_EQUIP, ets_mount_equip).                      %% 坐骑装备信息$/;"	d
+ETS_MOUNT_SKILL	.\include\common.hrl	/^-define(ETS_MOUNT_SKILL, ets_mount_skill).                      %% 坐骑技能信息$/;"	d
+ETS_MOUNT_SZBF	.\include\common.hrl	/^-define(ETS_MOUNT_SZBF, ets_mount_szbf).                        %% 坐骑孙子兵法信息$/;"	d
+ETS_NEW_SER_GIFT	.\include\common.hrl	/^-define(ETS_NEW_SER_GIFT, ets_new_ser_gift).                %% 新开服登陆奖励记录$/;"	d
+ETS_NOTICE	.\include\common.hrl	/^-define(ETS_NOTICE, ets_notice).                                %% 系统公告表$/;"	d
+ETS_NPC	.\include\common.hrl	/^-define(ETS_NPC, ets_npc).                                      %% npc$/;"	d
+ETS_OFFLINE_MSG	.\include\common.hrl	/^-define(ETS_OFFLINE_MSG, ets_offline_msg).                      %% 离线消息$/;"	d
+ETS_ONE_VS_ONE_RESULT	.\include\common.hrl	/^-define(ETS_ONE_VS_ONE_RESULT, ets_one_vs_one_result).          %% 夺旗战战果管理$/;"	d
+ETS_ONE_VS_ONE_SCENE	.\include\common.hrl	/^-define(ETS_ONE_VS_ONE_SCENE, ets_one_vs_one_scene).            %% 夺旗战场景管理$/;"	d
+ETS_ONLINE	.\include\common.hrl	/^-define(ETS_ONLINE, ets_online).                                %% 在线$/;"	d
+ETS_PET	.\include\common.hrl	/^-define(ETS_PET,               ets_pet).                        %% 宠物$/;"	d
+ETS_PET_MANUAL	.\include\common.hrl	/^-define(ETS_PET_MANUAL,        ets_pet_manual).                 %% 宠物图鉴$/;"	d
+ETS_PET_POTENTIAL	.\include\common.hrl	/^-define(ETS_PET_POTENTIAL,     ets_pet_potential).              %% 宠物潜能$/;"	d
+ETS_PET_SHOP	.\include\common.hrl	/^-define(ETS_PET_SHOP,          ets_pet_shop).                   %% 宠物商城$/;"	d
+ETS_PET_SKILL	.\include\common.hrl	/^-define(ETS_PET_SKILL,         ets_pet_skill).                  %% 宠物技能$/;"	d
+ETS_PET_SKILL_TREASUREBOX	.\include\common.hrl	/^-define(ETS_PET_SKILL_TREASUREBOX,ets_pet_skill_treasurebox).   %% 宠物技能宝箱$/;"	d
+ETS_PET_TREASUREBOX	.\include\common.hrl	/^-define(ETS_PET_TREASUREBOX,   ets_pet_treasurebox).            %% 宠物宝箱$/;"	d
+ETS_PLAYER_MERIDIAN	.\include\common.hrl	/^-define(ETS_PLAYER_MERIDIAN, ets_player_meridian).              %% 玩家经脉$/;"	d
+ETS_PROPOSE	.\include\common.hrl	/^-define(ETS_PROPOSE, ets_propose).                              %% 求婚信息$/;"	d
+ETS_QUIZ	.\include\common.hrl	/^-define(ETS_QUIZ, ets_quiz).                                    %% 答题活动题目$/;"	d
+ETS_QUIZ_ANSWER	.\include\common.hrl	/^-define(ETS_QUIZ_ANSWER, ets_quiz_answer).$/;"	d
+ETS_QUIZ_MEMBER	.\include\common.hrl	/^-define(ETS_QUIZ_MEMBER, ets_quiz_member).$/;"	d
+ETS_QUIZ_S	.\include\common.hrl	/^-define(ETS_QUIZ_S, ets_quiz_s).                                %% 答题活动题目$/;"	d
+ETS_RELA	.\include\common.hrl	/^-define(ETS_RELA, ets_rela).                                    %% 玩家关系表$/;"	d
+ETS_RELA_GROUP	.\include\common.hrl	/^-define(ETS_RELA_GROUP, ets_rela_group).                        %% 好友分组列表$/;"	d
+ETS_RELA_INFO	.\include\common.hrl	/^-define(ETS_RELA_INFO, ets_rela_info).                          %% 好友资料$/;"	d
+ETS_RELA_SET	.\include\common.hrl	/^-define(ETS_RELA_SET, ets_rela_set).                            %% 玩家好友分组名字表$/;"	d
+ETS_ROLE_OLYMPIAD	.\include\common.hrl	/^-define(ETS_ROLE_OLYMPIAD, ets_role_olympiad).                  %% 玩家奥运会答题信息表$/;"	d
+ETS_ROLE_TASK	.\include\common.hrl	/^-define(ETS_ROLE_TASK, ets_role_task).                          %% 已接任务$/;"	d
+ETS_ROLE_TASK_AUTO	.\include\common.hrl	/^-define(ETS_ROLE_TASK_AUTO, ets_role_task_auto).                %% 委托任务$/;"	d
+ETS_ROLE_TASK_LOG	.\include\common.hrl	/^-define(ETS_ROLE_TASK_LOG, ets_role_task_log).                  %% 已完成任务$/;"	d
+ETS_SCENE	.\include\common.hrl	/^-define(ETS_SCENE, ets_scene).                                  %% 场景$/;"	d
+ETS_SCENE_MON	.\include\common.hrl	/^-define(ETS_SCENE_MON, ets_scene_mon).                          %% 每种怪物所在场景$/;"	d
+ETS_SCENE_POSES	.\include\common.hrl	/^-define(ETS_SCENE_POSES, ets_scene_poses).                      %% 存放场景中可以移动的坐标，用于NPC寻路$/;"	d
+ETS_SCENE_SAFE_POSES	.\include\common.hrl	/^-define(ETS_SCENE_SAFE_POSES, ets_scene_safe_poses).            %% 存放场景中不可以PK的坐标$/;"	d
+ETS_SCENE_WATER_POSES	.\include\common.hrl	/^-define(ETS_SCENE_WATER_POSES, ets_scene_water_poses).          %% 存放水面的坐标$/;"	d
+ETS_SECRET_SHOP	.\include\common.hrl	/^-define(ETS_SECRET_SHOP, ets_secret_shop).                      %% 玩家神秘商店$/;"	d
+ETS_SELL	.\include\common.hrl	/^-define(ETS_SELL, ets_sell).                                    %% 挂售市场$/;"	d
+ETS_SELL_GOODS	.\include\common.hrl	/^-define(ETS_SELL_GOODS, ets_sell_goods).                        %% 挂售市场物品$/;"	d
+ETS_SERVER	.\include\common.hrl	/^-define(ETS_SERVER, ets_server).                                %% 线路组$/;"	d
+ETS_SHOP_LIMIT	.\include\common.hrl	/^-define(ETS_SHOP_LIMIT, ets_shop_limit).                        %% 限购商品$/;"	d
+ETS_SIEGE_BATTLE	.\include\common.hrl	/^-define(ETS_SIEGE_BATTLE,       ets_siege_battle).              %% 攻城战信息$/;"	d
+ETS_SIEGE_BATTLE_MEMBER_RESULT	.\include\common.hrl	/^-define(ETS_SIEGE_BATTLE_MEMBER_RESULT,ets_siege_battle_member_result). %% 攻城战战成员结果$/;"	d
+ETS_SIEGE_BATTLE_RESULT	.\include\common.hrl	/^-define(ETS_SIEGE_BATTLE_RESULT,ets_siege_battle_result).       %% 攻城战结果$/;"	d
+ETS_SIEGE_BATTLE_SCENE	.\include\common.hrl	/^-define(ETS_SIEGE_BATTLE_SCENE, ets_siege_battle_scene).        %% 攻城战场景$/;"	d
+ETS_SIEGE_BATTLE_STATE_INFO	.\include\common.hrl	/^-define(ETS_SIEGE_BATTLE_STATE_INFO, ets_siege_battle_state_info).%% 攻城战状态信息$/;"	d
+ETS_SIXIANG	.\include\common.hrl	/^-define(ETS_SIXIANG,           ets_sixiang).                    %% 远征四项.$/;"	d
+ETS_SIXIANG_RESULT	.\include\common.hrl	/^-define(ETS_SIXIANG_RESULT,    ets_sixiang_result).             %% 远征四项结果$/;"	d
+ETS_SIXIANG_SCENE	.\include\common.hrl	/^-define(ETS_SIXIANG_SCENE,     ets_sixiang_scene).              %% 远征四项场景$/;"	d
+ETS_SIXIANG_STATE_INFO	.\include\common.hrl	/^-define(ETS_SIXIANG_STATE_INFO,ets_sixiang_state_info).         %% 远征四项状态信息.$/;"	d
+ETS_SKILL	.\include\common.hrl	/^-define(ETS_SKILL, ets_skill).                                  %% 技能$/;"	d
+ETS_STUDIO_ACCOUNT	.\include\common.hrl	/^-define(ETS_STUDIO_ACCOUNT, ets_studio_account).                %% 小号管理$/;"	d
+ETS_TARGET_DAY	.\include\common.hrl	/^-define(ETS_TARGET_DAY, ets_target_day).                        %% 每日成就$/;"	d
+ETS_TARGET_WEEK	.\include\common.hrl	/^-define(ETS_TARGET_WEEK, ets_target_week).                      %% 周目标$/;"	d
+ETS_TARGET_WEEK_TASK	.\include\common.hrl	/^-define(ETS_TARGET_WEEK_TASK, ets_target_week_task).            %% 周目标每日目标$/;"	d
+ETS_TASK_CUMULATE	.\include\common.hrl	/^-define(ETS_TASK_CUMULATE, ets_task_cumulate).                  %% 经验累积任务历史日志$/;"	d
+ETS_TASK_QUERY_CACHE	.\include\common.hrl	/^-define(ETS_TASK_QUERY_CACHE, ets_task_query_cache).            %% 当前所有可接任务$/;"	d
+ETS_TD_SCORE	.\include\common.hrl	/^-define(ETS_TD_SCORE, ets_td_score).                            %% 塔防积分$/;"	d
+ETS_TD_ZH	.\include\common.hrl	/^-define(ETS_TD_ZH, ets_td_zh).                                  %% 塔防兵俑召唤信息$/;"	d
+ETS_TEAM	.\include\common.hrl	/^-define(ETS_TEAM, ets_team).                                    %% 队伍缓存$/;"	d
+ETS_TEAM_ENLIST	.\include\common.hrl	/^-define(ETS_TEAM_ENLIST, ets_team_enlist).                      %% 组队招募面板$/;"	d
+ETS_TICK_POND	.\include\common.hrl	/^-define(ETS_TICK_POND,ets_tick_pond).                           %% 号码池$/;"	d
+ETS_TIME_CONTROL	.\include\common.hrl	/^-define(ETS_TIME_CONTROL, ets_time_control).                    %% 时间控制$/;"	d
+ETS_TMB_OFFLINE	.\include\common.hrl	/^-define(ETS_TMB_OFFLINE, ets_tmb_offline).                      %% 队伍暂离成员列表$/;"	d
+ETS_TOWER_MASTER	.\include\common.hrl	/^-define(ETS_TOWER_MASTER, ets_tower_master).                    %% 塔各层霸主表$/;"	d
+ETS_TOWER_REWARD	.\include\common.hrl	/^-define(ETS_TOWER_REWARD, ets_tower_reward).                    %% 塔奖励$/;"	d
+ETS_TREASURE_HUNT	.\include\common.hrl	/^-define(ETS_TREASURE_HUNT, ets_treasure_hunt).$/;"	d
+ETS_TREE_MON	.\include\common.hrl	/^-define(ETS_TREE_MON, ets_tree_mon).                            %% 树怪物$/;"	d
+ETS_UPLV_ACT_RECORD	.\include\common.hrl	/^-define(ETS_UPLV_ACT_RECORD, ets_uplv_act_record).          %% 冲级活动记录$/;"	d
+ETS_VIP	.\include\common.hrl	/^-define(ETS_VIP, ets_vip).                                      %% VIP特权$/;"	d
+ETS_VIP_HORN_MSG	.\include\common.hrl	/^-define(ETS_VIP_HORN_MSG, ets_vip_horn_msg).                    %% VIP喇叭消息$/;"	d
+ETS_WANT_ENTER_DUNGEON	.\include\common.hrl	/^-define(ETS_WANT_ENTER_DUNGEON, ets_want_enter_dungeon).        %% "我要进入副本"列表$/;"	d
+ETS_WORLD_BOSS	.\include\common.hrl	/^-define(ETS_WORLD_BOSS, ets_world_boss).                        %% 世界BOSS伤害$/;"	d
+ETS_WTB	.\include\common.hrl	/^-define(ETS_WTB, ets_wtb).                                      %% 求购市场$/;"	d
+EXP_END_RATE_40_LV	.\include\common.hrl	/^-define(EXP_END_RATE_40_LV, [2.4, 30000]).$/;"	d
+EXP_END_RATE_60_LV	.\include\common.hrl	/^-define(EXP_END_RATE_60_LV, [4.8, 60000]).$/;"	d
+EXP_PER_RATE_40_LV	.\include\common.hrl	/^-define(EXP_PER_RATE_40_LV, 60).$/;"	d
+EXP_PER_RATE_60_LV	.\include\common.hrl	/^-define(EXP_PER_RATE_60_LV, 120).$/;"	d
+FL_POLICY_FILE	.\include\common.hrl	/^-define(FL_POLICY_FILE, <<"<cross-domain-policy><allow-access-from domain='*' to-ports='*' \/><\/cross-domain-policy>">>).$/;"	d
+FL_POLICY_REQ	.\include\common.hrl	/^-define(FL_POLICY_REQ, <<"<pol">>).$/;"	d
+FL_POLICY_REQ_All	.\include\common.hrl	/^-define(FL_POLICY_REQ_All, <<"<policy-file-request\/>\\0">>).$/;"	d
+FORBIMAP	.\include\common.hrl	/^-define(FORBIMAP, [999,998,994,992,224,228,230,995,996,997,982,981,978,976,974]).$/;"	d
+FREE_KILL_MAP	.\include\common.hrl	/^-define(FREE_KILL_MAP, [984,982,996,230,600001,600003,600006,600008,600010,976,974]).$/;"	d
+GUILD_MEMBER_WAGE	.\include\common.hrl	/^-define(GUILD_MEMBER_WAGE, guild_member_wage).                  %% 帮派成员周工资$/;"	d
+GUILD_WAGE	.\include\common.hrl	/^-define(GUILD_WAGE, guild_wage).                                %% 帮派周工资$/;"	d
+HEADER_LENGTH	.\src\base\yx_reader.erl	/^-define(HEADER_LENGTH, 6). % 消息头长度$/;"	d
+HEARTBEAT_INTERVAL	.\include\cluster.hrl	/^-define(HEARTBEAT_INTERVAL,         15).$/;"	d
+HEART_TIMEOUT	.\src\base\yx_reader.erl	/^-define(HEART_TIMEOUT, 100000). % 心跳包超时时间$/;"	d
+HEART_TIMEOUT_TIME	.\src\base\yx_reader.erl	/^-define(HEART_TIMEOUT_TIME, 0). % 心跳包超时次数$/;"	d
+HERO_BACK_CARD	.\include\common.hrl	/^-define(HERO_BACK_CARD, hero_back_card).                        %% 英雄回归卡号$/;"	d
+HOME_OBJECT	.\include\common.hrl	/^-define(HOME_OBJECT, home_object).                              %% 夫妻家园种植物$/;"	d
+HOME_VISITOR	.\include\common.hrl	/^-define(HOME_VISITOR, home_visitor).                            %% 夫妻家园访问名单$/;"	d
+INFO	.\include\common.hrl	/^-define(INFO(F, A), util:log("info", F, A, ?MODULE, ?LINE)).$/;"	d
+JOIN_SWORN_INFO	.\include\common.hrl	/^-define(JOIN_SWORN_INFO, join_sworn_info).                      %% 加入结拜申请信息$/;"	d
+KFZ_REIIN	.\include\common.hrl	/^-define(KFZ_REIIN, kfz_rein).                                   %% 跨服战重新进组$/;"	d
+KF_CLIENT_FLOWER	.\include\common.hrl	/^-define(KF_CLIENT_FLOWER, kf_client_flower).                    %% 跨服鲜花（各节点服）$/;"	d
+KF_SERVER_FLOWER	.\include\common.hrl	/^-define(KF_SERVER_FLOWER, kf_server_flower).                    %% 跨服鲜花（中心服）$/;"	d
+LINE_88	.\include\common.hrl	/^-define(LINE_88,[992,994,231,230,978]).$/;"	d
+LINE_88_OUT	.\include\common.hrl	/^-define(LINE_88_OUT, [100, 16, 16]).$/;"	d
+LINE_88_OUT_1	.\include\common.hrl	/^-define(LINE_88_OUT_1, [220, 70, 110]).$/;"	d
+LOGIC_ONLINE	.\include\common.hrl	/^-define(LOGIC_ONLINE, logic_online).                            %% 场景在线$/;"	d
+LOVE_DEGREE_LIMIT	.\include\common.hrl	/^-define(LOVE_DEGREE_LIMIT, 10000).      %% 爱心度最高值$/;"	d
+LUCKY_ANIMAL	.\include\common.hrl	/^-define(LUCKY_ANIMAL, lucky_animal).                            %% 生肖幸运抽奖$/;"	d
+LUCKY_ANIMAL_ROLE	.\include\common.hrl	/^-define(LUCKY_ANIMAL_ROLE, lucky_animal_role).                  %% 生肖大奖记录$/;"	d
+LV2ZS	.\include\common.hrl	/^-define(LV2ZS(PlayerLv), ((PlayerLv - 1) div 100))./;"	d
+MAX_ZHANLING	.\include\common.hrl	/^-define(MAX_ZHANLING, 1000).$/;"	d
+MONEY_TREE_LOG	.\include\common.hrl	/^-define(MONEY_TREE_LOG, money_tree_log).                        %% 摇钱树操作记录$/;"	d
+MONEY_TREE_REWARD_LOG	.\include\common.hrl	/^-define(MONEY_TREE_REWARD_LOG, money_tree_log).                 %% 摇钱树收益记录$/;"	d
+ONE_DAY_SECONDS	.\include\common.hrl	/^-define(ONE_DAY_SECONDS,        86400).$/;"	d
+PK_CHANGE_TIME	.\include\common.hrl	/^-define(PK_CHANGE_TIME, 3600*2).$/;"	d
+PLAYER_CHENGJIU	.\include\common.hrl	/^-define(PLAYER_CHENGJIU, player_chengjiu).                      %% 角色成就列表$/;"	d
+PRACTICE	.\include\common.hrl	/^-define(PRACTICE, practice).                                    %% 离线挂机$/;"	d
+PRACTICE_OUTLINE	.\include\common.hrl	/^-define(PRACTICE_OUTLINE, practice_outline).                    %% 离线经验托管$/;"	d
+RECONNECT_INTERVAL	.\include\cluster.hrl	/^-define(RECONNECT_INTERVAL,         10).$/;"	d
+RECV_FLOWER	.\include\common.hrl	/^-define(RECV_FLOWER, 2901).$/;"	d
+RED_GUILDER	.\include\common.hrl	/^-define(RED_GUILDER, 23405). %复活点守护-红$/;"	d
+RED_REBORN	.\include\common.hrl	/^-define(RED_REBORN, [13,30]).$/;"	d
+RED_REBORN_ICE	.\include\common.hrl	/^-define(RED_REBORN_ICE, [6,16]).$/;"	d
+ROLE_ACHIEVED_NAME	.\include\common.hrl	/^-define(ROLE_ACHIEVED_NAME, role_achieved_name).                %% 角色称号$/;"	d
+SCENE_3V3	.\include\common.hrl	/^-define(SCENE_3V3, [234, 238]).$/;"	d
+SECONDARY_PASSWORD	.\include\common.hrl	/^-define(SECONDARY_PASSWORD, secondary_password).                %% 二级密码$/;"	d
+SEND_FLOWER	.\include\common.hrl	/^-define(SEND_FLOWER, 2900).$/;"	d
+SEND_MSG	.\include\common.hrl	/^-define(SEND_MSG, 3).$/;"	d
+SERVER_APP	.\src\base\yx.erl	/^-define(SERVER_APP, yx).$/;"	d
+SERVER_STATUS	.\include\common.hrl	/^-define(SERVER_STATUS, server_status).                          %% 服务器信息$/;"	d
+SWORN_FRIENDS	.\include\common.hrl	/^-define(SWORN_FRIENDS, sworn_friends).                          %% 结拜关系$/;"	d
+SWORN_MEMBER	.\include\common.hrl	/^-define(SWORN_MEMBER, sworn_member).                            %% 结拜成员$/;"	d
+TCP_OPTIONS	.\include\common.hrl	/^-define(TCP_OPTIONS, [binary, {packet, 0}, {active, false}, {reuseaddr, true}, {nodelay, false}, {delay_send, true}, {send_timeout, 5000}, {keepalive, true}, {exit_on_close, true}]).$/;"	d
+TCP_OPTIONS	.\src\base\yx_tcp_listener.erl	/^-define(TCP_OPTIONS, [binary, {packet, 0}, {active, false}, {reuseaddr, true}, {nodelay, false}, {delay_send, true}, {send_timeout, 5000}, {keepalive, true}, {exit_on_close, true}]).$/;"	d
+TCP_TIMEOUT	.\src\base\yx_reader.erl	/^-define(TCP_TIMEOUT, 3000). % 解析协议超时时间$/;"	d
+TOWER_END_SCENEID	.\include\common.hrl	/^-define(TOWER_END_SCENEID, [430, 460]). % 远征岛结束场景$/;"	d
+USER_LOGIN	.\include\common.hrl	/^-define(USER_LOGIN, user_login).                                %% 用户登陆$/;"	d
+VERSUS_MON	.\include\common.hrl	/^-define(VERSUS_MON, versus_mon).                                %% 试炼 PVE$/;"	d
+WEDDING	.\include\common.hrl	/^-define(WEDDING, wedding).                                      %% 婚宴时间安排$/;"	d
+WEDDING_GIFT	.\include\common.hrl	/^-define(WEDDING_GIFT, wedding_gift).                            %% 婚宴送礼$/;"	d
+WINE_OUTLINE	.\include\common.hrl	/^-define(WINE_OUTLINE, wine_outline).                            %% 烧酒经验托管$/;"	d
+WISHING_PAPER	.\include\common.hrl	/^-define(WISHING_PAPER, wishing_paper).                          %% 许愿墙$/;"	d
+XISHU_LOSE	.\include\common.hrl	/^-define(XISHU_LOSE, 12).$/;"	d
+XISHU_WIN	.\include\common.hrl	/^-define(XISHU_WIN,  24).$/;"	d
+aaa	.\add_create_data_make.bat	/^:aaa$/;"	l
+accept	.\src\base\yx_tcp_acceptor.erl	/^accept(State = #state{sock=LSock}) ->$/;"	f	module:yx_tcp_acceptor
+achieved_name	.\include\record.hrl	/^-record(achieved_name, {$/;"	r
+apply_sworn_info	.\include\record.hrl	/^-record(apply_sworn_info, {$/;"	r
+arena_win	.\include\record.hrl	/^-record(arena_win, {$/;"	r
+async_recv	.\src\base\yx_reader.erl	/^async_recv(Sock, Length, Timeout) when is_port(Sock) ->$/;"	f	module:yx_reader
+base_activity	.\include\record.hrl	/^-record(base_activity, {$/;"	r
+base_anqi	.\include\record.hrl	/^-record(base_anqi, {$/;"	r
+base_bless_box	.\include\record.hrl	/^-record(base_bless_box, {$/;"	r
+base_chengjiu	.\include\record.hrl	/^-record(base_chengjiu, {$/;"	r
+base_chengjiu_award	.\include\record.hrl	/^-record(base_chengjiu_award, {$/;"	r
+base_fashion_suit	.\include\record.hrl	/^-record(base_fashion_suit,{$/;"	r
+base_fashion_ticket	.\include\record.hrl	/^-record(base_fashion_ticket,{$/;"	r
+base_fortune	.\include\record.hrl	/^-record(base_fortune, {$/;"	r
+base_fortune_color	.\include\record.hrl	/^-record(base_fortune_color, {$/;"	r
+base_fortune_task	.\include\record.hrl	/^-record(base_fortune_task, {$/;"	r
+base_happy_bag	.\include\record.hrl	/^-record(base_happy_bag, {$/;"	r
+base_happy_bag_subject	.\include\record.hrl	/^-record(base_happy_bag_subject, {$/;"	r
+base_hp_bag	.\include\record.hrl	/^-record(base_hp_bag, {$/;"	r
+base_lucky_box	.\include\record.hrl	/^-record(base_lucky_box, {$/;"	r
+base_mount	.\include\record.hrl	/^-record(base_mount, {$/;"	r
+base_mount_equip	.\include\record.hrl	/^-record(base_mount_equip, {$/;"	r
+base_mount_figure	.\include\record.hrl	/^-record(base_mount_figure, {$/;"	r
+base_mount_return	.\include\record.hrl	/^-record(base_mount_return, {$/;"	r
+base_mount_skill	.\include\record.hrl	/^-record(base_mount_skill, {$/;"	r
+base_mount_upgrade	.\include\record.hrl	/^-record(base_mount_upgrade, {$/;"	r
+base_secret_shop	.\include\record.hrl	/^-record(base_secret_shop, {$/;"	r
+before_line	.\include\record.hrl	/^-record(before_line, {$/;"	r
+bless_card	.\include\record.hrl	/^-record(bless_card, {$/;"	r
+captcha	.\include\record.hrl	/^-record(captcha, {$/;"	r
+captcha_image	.\include\record.hrl	/^-record(captcha_image, {$/;"	r
+chat_login_lost	.\src\base\yx_reader.erl	/^chat_login_lost(_Socket, Client, _Cmd, Reason) ->$/;"	f	module:yx_reader
+chat_parse_packet	.\src\base\yx_reader.erl	/^chat_parse_packet(Socket, Client) ->$/;"	f	module:yx_reader
+chat_status	.\include\record.hrl	/^-record(chat_status, {$/;"	r
+client	.\src\base\yx_reader.erl	/^-record(client, {$/;"	r
+clost_socket	.\src\base\yx_reader.erl	/^clost_socket(Socket) ->$/;"	f	module:yx_reader
+cls_center	.\src\yx_clusters_base.erl	/^cls_center() ->$/;"	f	module:yx_clusters_base
+cls_node	.\src\yx_clusters_base.erl	/^cls_node() ->$/;"	f	module:yx_clusters_base
+cluster_client_state	.\include\cluster.hrl	/^-record(cluster_client_state, {platform          = "",$/;"	r
+cluster_server_state	.\include\cluster.hrl	/^-record(cluster_server_state, {id              = "",$/;"	r
+code_change	.\src\base\yx_tcp_acceptor.erl	/^code_change(_OldVsn, State, _Extra) ->$/;"	f	module:yx_tcp_acceptor
+code_change	.\src\base\yx_tcp_listener.erl	/^code_change(_OldVsn, State, _Extra) ->$/;"	f	module:yx_tcp_listener
+code_change	.\src\mod\common\mod_disperse.erl	/^code_change(_OldVsn, State, _Extra)->$/;"	f	module:mod_disperse
+code_change	.\src\mod\common\mod_time.erl	/^code_change(_OldVsn, State, _Extra) ->$/;"	f	module:mod_time
+collector	.\include\record.hrl	/^-record(collector, {$/;"	r
+country	.\include\record.hrl	/^-record(country, {$/;"	r
+couple	.\include\record.hrl	/^-record(couple, {$/;"	r
+couple_home	.\include\record.hrl	/^-record(couple_home, {$/;"	r
+couple_home_info	.\include\record.hrl	/^-record(couple_home_info, {$/;"	r
+couple_insure	.\include\record.hrl	/^-record(couple_insure, {$/;"	r
+couple_skill_info	.\include\record.hrl	/^-record(couple_skill_info, {$/;"	r
+cpu_time	.\src\mod\common\mod_time.erl	/^cpu_time() -> $/;"	f	module:mod_time
+current_cruise	.\include\record.hrl	/^-record(current_cruise, {$/;"	r
+current_wedding	.\include\record.hrl	/^-record(current_wedding, {$/;"	r
+dict_chengjiu	.\include\record.hrl	/^-record(dict_chengjiu, {$/;"	r
+do_lost	.\src\base\yx_reader.erl	/^do_lost(_Socket, Client, _Cmd, Reason) ->$/;"	f	module:yx_reader
+do_parse_packet	.\src\base\yx_reader.erl	/^do_parse_packet(Socket, Client) ->$/;"	f	module:yx_reader
+dungeon	.\include\record.hrl	/^-record(dungeon,$/;"	r
+ets_70d_path	.\include\record.hrl	/^-record(ets_70d_path, {$/;"	r
+ets_activity	.\include\record.hrl	/^-record(ets_activity, {$/;"	r
+ets_ai	.\include\record.hrl	/^-record(ets_ai,$/;"	r
+ets_anqi	.\include\record.hrl	/^-record(ets_anqi, {$/;"	r
+ets_appointment	.\include\record.hrl	/^-record(ets_appointment, {$/;"	r
+ets_appointment_config	.\include\record.hrl	/^-record(ets_appointment_config, {$/;"	r
+ets_appointment_dungeon	.\include\record.hrl	/^-record(ets_appointment_dungeon, {$/;"	r
+ets_appointment_special_subject	.\include\record.hrl	/^-record(ets_appointment_special_subject, {$/;"	r
+ets_appointment_subject	.\include\record.hrl	/^-record(ets_appointment_subject, {$/;"	r
+ets_arena	.\include\record.hrl	/^-record(ets_arena, {$/;"	r
+ets_arena_result	.\include\record.hrl	/^-record(ets_arena_result, {$/;"	r
+ets_arena_scene	.\include\record.hrl	/^-record(ets_arena_scene, {$/;"	r
+ets_arena_state_info	.\include\record.hrl	/^-record(ets_arena_state_info, {$/;"	r
+ets_attribute_medal_skill	.\include\record.hrl	/^-record(ets_attribute_medal_skill, {$/;"	r
+ets_attribute_medal_soul	.\include\record.hrl	/^-record(ets_attribute_medal_soul, {$/;"	r
+ets_baike	.\include\record.hrl	/^-record(ets_baike, {$/;"	r
+ets_base_baike	.\include\record.hrl	/^-record(ets_base_baike, {$/;"	r
+ets_base_goods_drop	.\include\record.hrl	/^-record(ets_base_goods_drop, {$/;"	r
+ets_base_goods_pet	.\include\record.hrl	/^-record(ets_base_goods_pet, {$/;"	r
+ets_base_guild_battle_award	.\include\record.hrl	/^-record(ets_base_guild_battle_award, {$/;"	r
+ets_base_guild_dial	.\include\record.hrl	/^-record(ets_base_guild_dial,{$/;"	r
+ets_base_hanger	.\include\record.hrl	/^-record(ets_base_hanger, {$/;"	r
+ets_base_pet_manual	.\include\record.hrl	/^-record(ets_base_pet_manual, {$/;"	r
+ets_base_pet_potential	.\include\record.hrl	/^-record(ets_base_pet_potential, {$/;"	r
+ets_base_siege_battle_award	.\include\record.hrl	/^-record(ets_base_siege_battle_award, {$/;"	r
+ets_bless_box	.\include\record.hrl	/^-record(ets_bless_box, {$/;"	r
+ets_boss	.\include\record.hrl	/^-record(ets_boss, {$/;"	r
+ets_box	.\include\record.hrl	/^-record(ets_box, {$/;"	r
+ets_box_counter	.\include\record.hrl	/^-record(ets_box_counter, {$/;"	r
+ets_box_goods	.\include\record.hrl	/^-record(ets_box_goods, {$/;"	r
+ets_box_player_counter	.\include\record.hrl	/^-record(ets_box_player_counter, {$/;"	r
+ets_buff	.\include\record.hrl	/^-record(ets_buff, {$/;"	r
+ets_buff_watar	.\include\record.hrl	/^-record(ets_buff_watar, {$/;"	r
+ets_change_line	.\include\record.hrl	/^-record(ets_change_line, {$/;"	r
+ets_change_line_into_team	.\include\record.hrl	/^-record(ets_change_line_into_team, {$/;"	r
+ets_chat	.\include\record.hrl	/^-record(ets_chat, {$/;"	r
+ets_chengjiu_award	.\include\record.hrl	/^-record(ets_chengjiu_award, {$/;"	r
+ets_cluster	.\include\record.hrl	/^-record(ets_cluster, {$/;"	r
+ets_cluster_node	.\include\cluster.hrl	/^-record(ets_cluster_node,     {id           = "",$/;"	r
+ets_coin_dungeon	.\include\record.hrl	/^-record(ets_coin_dungeon, {$/;"	r
+ets_coin_rank	.\include\record.hrl	/^-record(ets_coin_rank, {$/;"	r
+ets_counter	.\include\record.hrl	/^-record(ets_counter, {$/;"	r
+ets_couple_love_life	.\include\record.hrl	/^-record(ets_couple_love_life, {$/;"	r
+ets_couple_ring	.\include\record.hrl	/^-record(ets_couple_ring, {$/;"	r
+ets_couple_ring_limit	.\include\record.hrl	/^-record(ets_couple_ring_limit, {$/;"	r
+ets_couple_sign	.\include\record.hrl	/^-record(ets_couple_sign, {$/;"	r
+ets_daily	.\include\record.hrl	/^-record(ets_daily, {$/;"	r
+ets_doubt_account	.\include\record.hrl	/^-record(ets_doubt_account, {$/;"	r
+ets_drop	.\include\record.hrl	/^-record(ets_drop, {$/;"	r
+ets_drop_counter	.\include\record.hrl	/^-record(ets_drop_counter, {$/;"	r
+ets_drop_factor	.\include\record.hrl	/^-record(ets_drop_factor, {$/;"	r
+ets_drop_goods	.\include\record.hrl	/^-record(ets_drop_goods, {$/;"	r
+ets_drop_rule	.\include\record.hrl	/^-record(ets_drop_rule, {$/;"	r
+ets_dungeon_enlist	.\include\record.hrl	/^-record(ets_dungeon_enlist, {$/;"	r
+ets_dungeon_enlist2	.\include\record.hrl	/^-record(ets_dungeon_enlist2, {$/;"	r
+ets_ever_name	.\include\record.hrl	/^-record(ets_ever_name, {$/;"	r
+ets_falling_stone	.\include\record.hrl	/^-record(ets_falling_stone, {$/;"	r
+ets_fashion_figure	.\include\record.hrl	/^-record(ets_fashion_figure,{$/;"	r
+ets_figure	.\include\record.hrl	/^-record(ets_figure, {$/;"	r
+ets_fire_wood	.\include\record.hrl	/^-record(ets_fire_wood, {$/;"	r
+ets_flag_battle	.\include\record.hrl	/^-record(ets_flag_battle, {$/;"	r
+ets_flag_battle_buff	.\include\record.hrl	/^-record(ets_flag_battle_buff, {$/;"	r
+ets_flag_battle_mon	.\include\record.hrl	/^-record(ets_flag_battle_mon, {$/;"	r
+ets_flag_battle_win_guild	.\include\record.hrl	/^-record(ets_flag_battle_win_guild, {$/;"	r
+ets_forge	.\include\record.hrl	/^-record(ets_forge, {$/;"	r
+ets_fortune	.\include\record.hrl	/^-record(ets_fortune, {$/;"	r
+ets_fortune_log	.\include\record.hrl	/^-record(ets_fortune_log, {$/;"	r
+ets_friend_tree	.\include\record.hrl	/^-record(ets_friend_tree, {$/;"	r
+ets_friend_tree_blessing	.\include\record.hrl	/^-record(ets_friend_tree_blessing,{$/;"	r
+ets_gift	.\include\record.hrl	/^-record(ets_gift, {$/;"	r
+ets_gift2	.\include\record.hrl	/^-record(ets_gift2, {$/;"	r
+ets_goods_add_attribute	.\include\record.hrl	/^-record(ets_goods_add_attribute, {$/;"	r
+ets_goods_effect	.\include\record.hrl	/^-record(ets_goods_effect, {$/;"	r
+ets_goods_exchange	.\include\record.hrl	/^-record(ets_goods_exchange, {$/;"	r
+ets_goods_type	.\include\record.hrl	/^-record(ets_goods_type, {$/;"	r
+ets_grab_stone_result	.\include\record.hrl	/^-record(ets_grab_stone_result, {$/;"	r
+ets_grab_stone_state_info	.\include\record.hrl	/^-record(ets_grab_stone_state_info, {$/;"	r
+ets_guild	.\include\record.hrl	/^-record(ets_guild, {$/;"	r
+ets_guild_apply	.\include\record.hrl	/^-record(ets_guild_apply, {$/;"	r
+ets_guild_award	.\include\record.hrl	/^-record(ets_guild_award, {$/;"	r
+ets_guild_award_alloc	.\include\record.hrl	/^-record(ets_guild_award_alloc, {$/;"	r
+ets_guild_battle_member_info	.\include\record.hrl	/^-record(ets_guild_battle_member_info, {$/;"	r
+ets_guild_battle_member_result	.\include\record.hrl	/^-record(ets_guild_battle_member_result, {$/;"	r
+ets_guild_battle_result	.\include\record.hrl	/^-record(ets_guild_battle_result, {$/;"	r
+ets_guild_battle_scene	.\include\record.hrl	/^-record(ets_guild_battle_scene, {$/;"	r
+ets_guild_battle_state_info	.\include\record.hrl	/^-record(ets_guild_battle_state_info, {$/;"	r
+ets_guild_exclusive	.\include\record.hrl	/^-record(ets_guild_exclusive, {$/;"	r
+ets_guild_invite	.\include\record.hrl	/^-record(ets_guild_invite, {$/;"	r
+ets_guild_member	.\include\record.hrl	/^-record(ets_guild_member, {$/;"	r
+ets_guild_member_award	.\include\record.hrl	/^-record(ets_guild_member_award, {$/;"	r
+ets_guild_member_skill	.\include\record.hrl	/^-record(ets_guild_member_skill, {$/;"	r
+ets_guild_skill	.\include\record.hrl	/^-record(ets_guild_skill, {$/;"	r
+ets_guildbossmgr	.\include\record.hrl	/^-record(ets_guildbossmgr, {$/;"	r
+ets_hanger	.\include\record.hrl	/^-record(ets_hanger, {$/;"	r
+ets_happy_bag	.\include\record.hrl	/^-record(ets_happy_bag, {$/;"	r
+ets_horn_msg	.\include\record.hrl	/^-record(ets_horn_msg, {$/;"	r
+ets_hp_bag	.\include\record.hrl	/^-record(ets_hp_bag, {$/;"	r
+ets_ip_limit	.\include\record.hrl	/^-record(ets_ip_limit, {$/;"	r
+ets_jewel_battle_result	.\include\record.hrl	/^-record(ets_jewel_battle_result, {$/;"	r
+ets_jewel_battle_scene	.\include\record.hrl	/^-record(ets_jewel_battle_scene, {$/;"	r
+ets_jewel_battle_state_info	.\include\record.hrl	/^-record(ets_jewel_battle_state_info, {$/;"	r
+ets_kfz_3v3_result	.\include\record.hrl	/^-record(ets_kfz_3v3_result, {$/;"	r
+ets_kfz_3v3_scene	.\include\record.hrl	/^-record(ets_kfz_3v3_scene, {$/;"	r
+ets_kfz_3v3_times	.\include\record.hrl	/^-record(ets_kfz_3v3_times, {$/;"	r
+ets_kfz_alliance_log	.\include\record.hrl	/^-record(ets_kfz_alliance_log, {$/;"	r
+ets_kfz_alliance_rank	.\include\record.hrl	/^-record(ets_kfz_alliance_rank, {$/;"	r
+ets_kfz_alliance_result	.\include\record.hrl	/^-record(ets_kfz_alliance_result, {$/;"	r
+ets_kfz_alliance_scene	.\include\record.hrl	/^-record(ets_kfz_alliance_scene, {$/;"	r
+ets_kfz_alliance_state	.\include\record.hrl	/^-record(ets_kfz_alliance_state, {$/;"	r
+ets_kfz_arena	.\include\record.hrl	/^-record(ets_kfz_arena, {$/;"	r
+ets_kfz_arena_battle	.\include\record.hrl	/^-record(ets_kfz_arena_battle, {$/;"	r
+ets_kfz_arena_result	.\include\record.hrl	/^-record(ets_kfz_arena_result, {$/;"	r
+ets_kfz_arena_scene	.\include\record.hrl	/^-record(ets_kfz_arena_scene, {$/;"	r
+ets_kfz_boss_guild_result	.\include\record.hrl	/^-record(ets_kfz_boss_guild_result, {$/;"	r
+ets_kfz_boss_result	.\include\record.hrl	/^-record(ets_kfz_boss_result, {$/;"	r
+ets_kfz_boss_state_info	.\include\record.hrl	/^-record(ets_kfz_boss_state_info, {$/;"	r
+ets_kfz_enemy	.\include\record.hrl	/^-record(ets_kfz_enemy, {$/;"	r
+ets_kfz_friend	.\include\record.hrl	/^-record(ets_kfz_friend, {$/;"	r
+ets_kfz_league_result	.\include\record.hrl	/^-record(ets_kfz_league_result, {$/;"	r
+ets_kfz_league_scene	.\include\record.hrl	/^-record(ets_kfz_league_scene, {$/;"	r
+ets_kfz_league_state	.\include\record.hrl	/^-record(ets_kfz_league_state, {$/;"	r
+ets_kfz_league_team	.\include\record.hrl	/^-record(ets_kfz_league_team, {$/;"	r
+ets_kfz_league_watch	.\include\record.hrl	/^-record(ets_kfz_league_watch, {$/;"	r
+ets_kfz_player	.\include\record.hrl	/^-record(ets_kfz_player, {$/;"	r
+ets_kfz_team	.\include\record.hrl	/^-record(ets_kfz_team, {$/;"	r
+ets_log_guild_dial	.\include\record.hrl	/^-record(ets_log_guild_dial, {$/;"	r
+ets_log_guild_dial_person	.\include\record.hrl	/^-record(ets_log_guild_dial_person , {$/;"	r
+ets_login_counter	.\include\record.hrl	/^-record(ets_login_counter, {$/;"	r
+ets_lottry_leiji	.\include\record.hrl	/^-record(ets_lottry_leiji, {$/;"	r
+ets_lottry_lucker	.\include\record.hrl	/^-record(ets_lottry_lucker,{$/;"	r
+ets_lottry_target_day	.\include\record.hrl	/^-record(ets_lottry_target_day, {$/;"	r
+ets_lottry_tick	.\include\record.hrl	/^-record(ets_lottry_tick,{$/;"	r
+ets_master	.\include\record.hrl	/^-record(ets_master, {$/;"	r
+ets_master_apprentice	.\include\record.hrl	/^-record(ets_master_apprentice, {$/;"	r
+ets_meridian_attribute	.\include\record.hrl	/^-record(ets_meridian_attribute, {$/;"	r
+ets_mon	.\include\record.hrl	/^-record(ets_mon, {$/;"	r
+ets_mon_goods_counter	.\include\record.hrl	/^-record(ets_mon_goods_counter, {$/;"	r
+ets_mount	.\include\record.hrl	/^-record(ets_mount, {$/;"	r
+ets_mount_change	.\include\record.hrl	/^-record(ets_mount_change, {$/;"	r
+ets_mount_equip	.\include\record.hrl	/^-record(ets_mount_equip, {$/;"	r
+ets_mount_skill	.\include\record.hrl	/^-record(ets_mount_skill, {$/;"	r
+ets_mount_szbf	.\include\record.hrl	/^-record(ets_mount_szbf, {$/;"	r
+ets_new_ser_gift	.\include\record.hrl	/^-record(ets_new_ser_gift,{$/;"	r
+ets_notice	.\include\record.hrl	/^-record(ets_notice, {$/;"	r
+ets_npc	.\include\record.hrl	/^-record(ets_npc, {$/;"	r
+ets_one_vs_one_result	.\include\record.hrl	/^-record(ets_one_vs_one_result, {$/;"	r
+ets_one_vs_one_scene	.\include\record.hrl	/^-record(ets_one_vs_one_scene, {$/;"	r
+ets_online	.\include\record.hrl	/^-record(ets_online, {$/;"	r
+ets_pet	.\include\record.hrl	/^-record(ets_pet, {$/;"	r
+ets_pet_manual	.\include\record.hrl	/^-record(ets_pet_manual, {$/;"	r
+ets_pet_potential	.\include\record.hrl	/^-record(ets_pet_potential, {$/;"	r
+ets_pet_shop	.\include\record.hrl	/^-record(ets_pet_shop, {$/;"	r
+ets_pet_skill	.\include\record.hrl	/^-record(ets_pet_skill, {$/;"	r
+ets_pet_skill_treasurebox	.\include\record.hrl	/^-record(ets_pet_skill_treasurebox, {$/;"	r
+ets_pet_treasurebox	.\include\record.hrl	/^-record(ets_pet_treasurebox, {$/;"	r
+ets_player_meridian	.\include\record.hrl	/^-record(ets_player_meridian,$/;"	r
+ets_quiz	.\include\record.hrl	/^-record(ets_quiz, {$/;"	r
+ets_quiz_s	.\include\record.hrl	/^-record(ets_quiz_s, {$/;"	r
+ets_rela	.\include\record.hrl	/^-record(ets_rela,$/;"	r
+ets_rela_group	.\include\record.hrl	/^-record(ets_rela_group,$/;"	r
+ets_rela_info	.\include\record.hrl	/^-record(ets_rela_info,$/;"	r
+ets_rela_set	.\include\record.hrl	/^-record(ets_rela_set,$/;"	r
+ets_role_olympiad	.\include\record.hrl	/^-record(ets_role_olympiad, {$/;"	r
+ets_scene	.\include\record.hrl	/^-record(ets_scene,$/;"	r
+ets_scene_mon	.\include\record.hrl	/^-record(ets_scene_mon,$/;"	r
+ets_secret_shop	.\include\record.hrl	/^-record(ets_secret_shop, {$/;"	r
+ets_sell	.\include\record.hrl	/^-record(ets_sell, {$/;"	r
+ets_shop	.\include\record.hrl	/^-record(ets_shop, {$/;"	r
+ets_shop_limit	.\include\record.hrl	/^-record(ets_shop_limit, {$/;"	r
+ets_siege_battle	.\include\record.hrl	/^-record(ets_siege_battle, {$/;"	r
+ets_siege_battle_member_result	.\include\record.hrl	/^-record(ets_siege_battle_member_result, {$/;"	r
+ets_siege_battle_result	.\include\record.hrl	/^-record(ets_siege_battle_result, {$/;"	r
+ets_siege_battle_scene	.\include\record.hrl	/^-record(ets_siege_battle_scene, {$/;"	r
+ets_siege_battle_state_info	.\include\record.hrl	/^-record(ets_siege_battle_state_info, {$/;"	r
+ets_sixiang	.\include\record.hrl	/^-record(ets_sixiang, {$/;"	r
+ets_sixiang_result	.\include\record.hrl	/^-record(ets_sixiang_result, {$/;"	r
+ets_sixiang_scene	.\include\record.hrl	/^-record(ets_sixiang_scene, {$/;"	r
+ets_sixiang_state_info	.\include\record.hrl	/^-record(ets_sixiang_state_info, {$/;"	r
+ets_skill	.\include\record.hrl	/^-record(ets_skill, {$/;"	r
+ets_studio_account	.\include\record.hrl	/^-record(ets_studio_account, {$/;"	r
+ets_talent	.\include\record.hrl	/^-record(ets_talent, {$/;"	r
+ets_target_day	.\include\record.hrl	/^-record(ets_target_day, {$/;"	r
+ets_target_week	.\include\record.hrl	/^-record(ets_target_week, {$/;"	r
+ets_target_week_task	.\include\record.hrl	/^-record(ets_target_week_task, {$/;"	r
+ets_task_cumulate	.\include\record.hrl	/^-record(ets_task_cumulate, {$/;"	r
+ets_td_rank1	.\include\record.hrl	/^-record(ets_td_rank1, {id = 0, rolelist = [], wave = 0, use_time = 0, do_time = 0}).$/;"	r
+ets_td_rank2	.\include\record.hrl	/^-record(ets_td_rank2, {id = 0, rolelist = [], wave = 0, use_time = 0, do_time = 0}).$/;"	r
+ets_td_score	.\include\record.hrl	/^-record(ets_td_score, {$/;"	r
+ets_td_zh	.\include\record.hrl	/^-record(ets_td_zh, {$/;"	r
+ets_team	.\include\record.hrl	/^-record(ets_team, {$/;"	r
+ets_team_enlist	.\include\record.hrl	/^-record(ets_team_enlist, {$/;"	r
+ets_tick_pond	.\include\record.hrl	/^-record(ets_tick_pond, {$/;"	r
+ets_time_control	.\include\record.hrl	/^-record(ets_time_control, {$/;"	r
+ets_tmb_offline	.\include\record.hrl	/^-record(ets_tmb_offline, {$/;"	r
+ets_tower_master	.\include\record.hrl	/^-record(ets_tower_master, {$/;"	r
+ets_tower_reward	.\include\record.hrl	/^-record(ets_tower_reward, {$/;"	r
+ets_treasure_hunt	.\include\record.hrl	/^-record(ets_treasure_hunt, {$/;"	r
+ets_uplv_act_record	.\include\record.hrl	/^-record(ets_uplv_act_record, {$/;"	r
+ets_vip	.\include\record.hrl	/^-record(ets_vip, {$/;"	r
+ets_want_enter_dungeon	.\include\record.hrl	/^-record(ets_want_enter_dungeon, {$/;"	r
+ets_world_boss	.\include\record.hrl	/^-record(ets_world_boss, {$/;"	r
+ets_wtb	.\include\record.hrl	/^-record(ets_wtb, {$/;"	r
+exit_make	.\add_create_data_make.bat	/^:exit_make$/;"	l
+fb_card	.\include\record.hrl	/^-record(fb_card, {$/;"	r
+figure	.\include\record.hrl	/^-record(figure, {$/;"	r
+gateway_parse_packet	.\src\base\yx_reader.erl	/^gateway_parse_packet(Socket) ->$/;"	f	module:yx_reader
+get_ets	.\src\mod\common\mod_time.erl	/^get_ets() ->$/;"	f	module:mod_time
+get_line	.\src\base\yx_reader.erl	/^get_line() ->   $/;"	f	module:yx_reader
+goods	.\include\record.hrl	/^-record(goods, {$/;"	r
+goods_attribute	.\include\record.hrl	/^-record(goods_attribute, {$/;"	r
+goods_status	.\include\record.hrl	/^-record(goods_status, {$/;"	r
+guild_battle_win	.\include\record.hrl	/^-record(guild_battle_win, {$/;"	r
+guild_member_wage	.\include\record.hrl	/^-record(guild_member_wage, {$/;"	r
+guild_wage	.\include\record.hrl	/^-record(guild_wage, {$/;"	r
+handle_call	.\src\base\yx_tcp_acceptor.erl	/^handle_call(_Request, _From, State) ->$/;"	f	module:yx_tcp_acceptor
+handle_call	.\src\base\yx_tcp_listener.erl	/^handle_call(_Request, _From, State) ->$/;"	f	module:yx_tcp_listener
+handle_call	.\src\mod\common\mod_disperse.erl	/^handle_call(_R , _FROM, State) ->$/;"	f	module:mod_disperse
+handle_call	.\src\mod\common\mod_time.erl	/^handle_call(_Request, _From, State) ->$/;"	f	module:mod_time
+handle_cast	.\src\base\yx_tcp_acceptor.erl	/^handle_cast(_Msg, State) ->$/;"	f	module:yx_tcp_acceptor
+handle_cast	.\src\base\yx_tcp_acceptor.erl	/^handle_cast(accept, State) ->$/;"	f	module:yx_tcp_acceptor
+handle_cast	.\src\base\yx_tcp_listener.erl	/^handle_cast(_Msg, State) ->$/;"	f	module:yx_tcp_listener
+handle_cast	.\src\mod\common\mod_disperse.erl	/^handle_cast(_R , State) ->$/;"	f	module:mod_disperse
+handle_cast	.\src\mod\common\mod_time.erl	/^handle_cast(_Msg, State) ->$/;"	f	module:mod_time
+handle_info	.\src\base\yx_tcp_acceptor.erl	/^handle_info(_Info, State) ->$/;"	f	module:yx_tcp_acceptor
+handle_info	.\src\base\yx_tcp_acceptor.erl	/^handle_info({inet_async, LSock, Ref, {error, closed}}, State=#state{sock=LSock, ref=Ref}) ->$/;"	f	module:yx_tcp_acceptor
+handle_info	.\src\base\yx_tcp_acceptor.erl	/^handle_info({inet_async, LSock, Ref, {ok, Sock}}, State = #state{sock=LSock, ref=Ref}) ->$/;"	f	module:yx_tcp_acceptor
+handle_info	.\src\base\yx_tcp_listener.erl	/^handle_info(_Info, State) ->$/;"	f	module:yx_tcp_listener
+handle_info	.\src\mod\common\mod_disperse.erl	/^handle_info(_Reason, State) ->$/;"	f	module:mod_disperse
+handle_info	.\src\mod\common\mod_time.erl	/^handle_info(_Info, State) ->$/;"	f	module:mod_time
+handle_info	.\src\mod\common\mod_time.erl	/^handle_info({event, clock}, State) ->$/;"	f	module:mod_time
+hero_back_card	.\include\record.hrl	/^-record(hero_back_card, {$/;"	r
+hero_monument	.\include\record.hrl	/^-record(hero_monument, {$/;"	r
+home_object	.\include\record.hrl	/^-record(home_object, {$/;"	r
+home_visitor	.\include\record.hrl	/^-record(home_visitor, {$/;"	r
+info	.\src\mod\common\mod_time.erl	/^info() ->$/;"	f	module:mod_time
+init	.\src\base\yx_reader.erl	/^init(Type, Node, Port, CalcNode) ->$/;"	f	module:yx_reader
+init	.\src\base\yx_sup.erl	/^init([]) ->$/;"	f	module:yx_sup
+init	.\src\base\yx_tcp_acceptor.erl	/^init({LSock}) ->$/;"	f	module:yx_tcp_acceptor
+init	.\src\base\yx_tcp_acceptor_sup.erl	/^init([]) ->$/;"	f	module:yx_tcp_acceptor_sup
+init	.\src\base\yx_tcp_client_sup.erl	/^init([server]) ->$/;"	f	module:yx_tcp_client_sup
+init	.\src\base\yx_tcp_client_sup.erl	/^init([unite]) ->$/;"	f	module:yx_tcp_client_sup
+init	.\src\base\yx_tcp_listener.erl	/^init({AcceptorCount, Port}) ->$/;"	f	module:yx_tcp_listener
+init	.\src\base\yx_tcp_listener_sup.erl	/^init({AcceptorCount, Port}) ->$/;"	f	module:yx_tcp_listener_sup
+init	.\src\mod\common\mod_disperse.erl	/^init([Ip, Port, Sid]) ->$/;"	f	module:mod_disperse
+init	.\src\mod\common\mod_time.erl	/^init([]) ->$/;"	f	module:mod_time
+join_sworn_info	.\include\record.hrl	/^-record(join_sworn_info, {$/;"	r
+kf_client_flower	.\include\record.hrl	/^-record(kf_client_flower, {$/;"	r
+kf_server_flower	.\include\record.hrl	/^-record(kf_server_flower, {$/;"	r
+kfz_rein	.\include\record.hrl	/^-record(kfz_rein, {$/;"	r
+lode	.\include\record.hrl	/^-record(lode, {$/;"	r
+log	.\src\base\yx_reader.erl	/^log(F, A) ->$/;"	f	module:yx_reader
+logic_login_lost	.\src\base\yx_reader.erl	/^logic_login_lost(_Socket, Client, _Cmd, Reason) ->$/;"	f	module:yx_reader
+logic_online	.\include\record.hrl	/^-record(logic_online, {$/;"	r
+logic_parse_packet	.\src\base\yx_reader.erl	/^logic_parse_packet(Socket, Client) ->$/;"	f	module:yx_reader
+logic_status	.\include\record.hrl	/^-record(logic_status, {$/;"	r
+login_lost	.\src\base\yx_reader.erl	/^login_lost(Socket, Client, _Cmd, Reason) ->$/;"	f	module:yx_reader
+login_parse_packet	.\src\base\yx_reader.erl	/^login_parse_packet(Socket, Client) ->$/;"	f	module:yx_reader
+lucky_animal	.\include\record.hrl	/^-record(lucky_animal, {$/;"	r
+lucky_animal_role	.\include\record.hrl	/^-record(lucky_animal_role, {$/;"	r
+mail	.\include\record.hrl	/^-record(mail, {$/;"	r
+mail_activity	.\include\record.hrl	/^-record(mail_activity, {$/;"	r
+marriage_event	.\include\record.hrl	/^-record(marriage_event, {$/;"	r
+mb	.\include\record.hrl	/^-record(mb,$/;"	r
+mod_disperse	.\src\mod\common\mod_disperse.erl	/^-module(mod_disperse).$/;"	m
+mod_time	.\src\mod\common\mod_time.erl	/^-module(mod_time).$/;"	m
+mon_call	.\include\record.hrl	/^-record(mon_call, {$/;"	r
+money_tree	.\include\record.hrl	/^-record(money_tree, {$/;"	r
+money_tree_log	.\include\record.hrl	/^-record(money_tree_log, {$/;"	r
+node_stop	.\src\base\yx.erl	/^node_stop() ->$/;"	f	module:yx
+now	.\src\mod\common\mod_time.erl	/^now() -> $/;"	f	module:mod_time
+now_seconds	.\src\mod\common\mod_time.erl	/^now_seconds()->$/;"	f	module:mod_time
+offline_msg	.\include\record.hrl	/^-record(offline_msg, {$/;"	r
+player_status	.\include\record.hrl	/^-record(player_status, {$/;"	r
+practice	.\include\record.hrl	/^-record(practice, {$/;"	r
+practice_outline	.\include\record.hrl	/^-record(practice_outline, {$/;"	r
+propose	.\include\record.hrl	/^-record(propose, {$/;"	r
+role_achieved_name	.\include\record.hrl	/^-record(role_achieved_name, {$/;"	r
+role_task	.\include\record.hrl	/^-record(role_task,$/;"	r
+role_task_auto	.\include\record.hrl	/^-record(role_task_auto,$/;"	r
+role_task_log	.\include\record.hrl	/^-record(role_task_log,$/;"	r
+routing	.\src\base\yx_reader.erl	/^routing(Cmd, Binary) ->$/;"	f	module:yx_reader
+run	.\src\base\yx_reader.erl	/^run(Cmd, Data, Fun) ->$/;"	f	module:yx_reader
+secondary_password	.\include\record.hrl	/^-record(secondary_password, {$/;"	r
+sell_status	.\include\record.hrl	/^-record(sell_status, {$/;"	r
+server	.\include\record.hrl	/^-record(server, {$/;"	r
+server	.\include\server.hrl	/^-record(server, {$/;"	r
+server_start	.\src\base\yx.erl	/^server_start()->$/;"	f	module:yx
+server_status	.\include\record.hrl	/^-record(server_status, {$/;"	r
+server_stop	.\src\base\yx.erl	/^server_stop() ->$/;"	f	module:yx
+set_sockopt	.\src\base\yx_tcp_acceptor.erl	/^set_sockopt(LSock, Sock) ->$/;"	f	module:yx_tcp_acceptor
+spouse_info	.\include\record.hrl	/^-record(spouse_info, {$/;"	r
+start	.\src\base\yx_app.erl	/^start(normal, []) ->$/;"	f	module:yx_app
+start	.\src\base\yx_clusters.erl	/^start([Ip, Port, Sid]) ->$/;"	f	module:yx_clusters
+start	.\src\base\yx_server.erl	/^start([Ip, Port, Sid]) ->$/;"	f	module:yx_server
+start	.\src\base\yx_unite.erl	/^start([Ip, Port, Sid]) ->$/;"	f	module:yx_unite
+start	.\src\yx_clusters_base.erl	/^start() ->$/;"	f	module:yx_clusters_base
+start	.\src\yx_server_base.erl	/^start() ->$/;"	f	module:yx_server_base
+start	.\src\yx_unite_base.erl	/^start() ->$/;"	f	module:yx_unite_base
+start_child	.\src\base\yx_sup.erl	/^start_child(Mod) ->$/;"	f	module:yx_sup
+start_child	.\src\base\yx_sup.erl	/^start_child(Mod, Args) ->$/;"	f	module:yx_sup
+start_client	.\src\base\yx_server.erl	/^start_client() ->$/;"	f	module:yx_server
+start_client	.\src\base\yx_tcp_acceptor.erl	/^start_client(Sock) ->$/;"	f	module:yx_tcp_acceptor
+start_client	.\src\base\yx_unite.erl	/^start_client() ->$/;"	f	module:yx_unite
+start_disperse	.\src\base\yx_clusters.erl	/^start_disperse([Ip, Port, Sid]) ->$/;"	f	module:yx_clusters
+start_disperse	.\src\base\yx_server.erl	/^start_disperse([Ip, Port, Sid]) ->$/;"	f	module:yx_server
+start_disperse	.\src\base\yx_unite.erl	/^start_disperse([Ip, Port, Sid]) ->$/;"	f	module:yx_unite
+start_link	.\src\base\yx_reader.erl	/^start_link(Type, Node, Port) ->$/;"	f	module:yx_reader
+start_link	.\src\base\yx_reader.erl	/^start_link(Type, Node, Port, CalcNode) ->$/;"	f	module:yx_reader
+start_link	.\src\base\yx_sup.erl	/^start_link() ->$/;"	f	module:yx_sup
+start_link	.\src\base\yx_tcp_acceptor.erl	/^start_link(LSock) ->$/;"	f	module:yx_tcp_acceptor
+start_link	.\src\base\yx_tcp_acceptor_sup.erl	/^start_link() ->$/;"	f	module:yx_tcp_acceptor_sup
+start_link	.\src\base\yx_tcp_client_sup.erl	/^start_link(server) ->$/;"	f	module:yx_tcp_client_sup
+start_link	.\src\base\yx_tcp_client_sup.erl	/^start_link(unite) ->$/;"	f	module:yx_tcp_client_sup
+start_link	.\src\base\yx_tcp_listener.erl	/^start_link(AcceptorCount, Port) ->$/;"	f	module:yx_tcp_listener
+start_link	.\src\base\yx_tcp_listener_sup.erl	/^start_link(Port) ->$/;"	f	module:yx_tcp_listener_sup
+start_link	.\src\mod\common\mod_disperse.erl	/^start_link(Ip, Port, Sid) ->$/;"	f	module:mod_disperse
+start_link	.\src\mod\common\mod_time.erl	/^start_link() ->$/;"	f	module:mod_time
+start_tcp	.\src\base\yx_server.erl	/^start_tcp(Port) ->$/;"	f	module:yx_server
+start_tcp	.\src\base\yx_unite.erl	/^start_tcp(Port) ->$/;"	f	module:yx_unite
+state	.\src\base\yx_tcp_acceptor.erl	/^-record(state, {sock, ref}).$/;"	r
+stop	.\src\base\yx_app.erl	/^stop(_State) ->$/;"	f	module:yx_app
+stop	.\src\base\yx_clusters.erl	/^stop() ->$/;"	f	module:yx_clusters
+stop	.\src\base\yx_server.erl	/^stop() ->$/;"	f	module:yx_server
+stop	.\src\base\yx_unite.erl	/^stop() ->$/;"	f	module:yx_unite
+stop	.\src\yx_clusters_base.erl	/^stop() ->$/;"	f	module:yx_clusters_base
+stop	.\src\yx_server_base.erl	/^stop() ->$/;"	f	module:yx_server_base
+stop	.\src\yx_unite_base.erl	/^stop() ->$/;"	f	module:yx_unite_base
+suit_attribute	.\include\record.hrl	/^-record(suit_attribute, {$/;"	r
+sworn_friends	.\include\record.hrl	/^-record(sworn_friends, {$/;"	r
+sworn_member	.\include\record.hrl	/^-record(sworn_member, {$/;"	r
+talent_state	.\include\record.hrl	/^-record(talent_state, {$/;"	r
+task	.\include\record.hrl	/^-record(task,$/;"	r
+task_condition	.\include\record.hrl	/^-record(task_condition,$/;"	r
+team	.\include\record.hrl	/^-record(team,$/;"	r
+terminate	.\src\base\yx_tcp_acceptor.erl	/^terminate(_Reason, State) ->$/;"	f	module:yx_tcp_acceptor
+terminate	.\src\base\yx_tcp_listener.erl	/^terminate(_Reason, State) ->$/;"	f	module:yx_tcp_listener
+terminate	.\src\mod\common\mod_disperse.erl	/^terminate(_R, State) ->$/;"	f	module:mod_disperse
+terminate	.\src\mod\common\mod_time.erl	/^terminate(_Reason, _State) ->$/;"	f	module:mod_time
+tower	.\include\record.hrl	/^-record(tower, {$/;"	r
+tower_mon	.\include\record.hrl	/^-record(tower_mon,{$/;"	r
+unite_login_lost	.\src\base\yx_reader.erl	/^unite_login_lost(_Socket, Client, _Cmd, Reason) ->$/;"	f	module:yx_reader
+unite_parse_packet	.\src\base\yx_reader.erl	/^unite_parse_packet(Socket, Client) ->$/;"	f	module:yx_reader
+user_login	.\include\record.hrl	/^-record(user_login, {$/;"	r
+versus_mon	.\include\record.hrl	/^-record(versus_mon, {$/;"	r
+wedding	.\include\record.hrl	/^-record(wedding, {$/;"	r
+wedding_gift	.\include\record.hrl	/^-record(wedding_gift, {$/;"	r
+week_calendar_ratio	.\include\record.hrl	/^-record(week_calendar_ratio, {$/;"	r
+wine_outline	.\include\record.hrl	/^-record(wine_outline, {$/;"	r
+wishing_paper	.\include\record.hrl	/^-record(wishing_paper, {$/;"	r
+yx	.\src\base\yx.erl	/^-module(yx).$/;"	m
+yx_app	.\src\base\yx_app.erl	/^-module(yx_app).$/;"	m
+yx_clusters	.\src\base\yx_clusters.erl	/^-module(yx_clusters).$/;"	m
+yx_clusters_base	.\src\yx_clusters_base.erl	/^-module(yx_clusters_base).$/;"	m
+yx_reader	.\src\base\yx_reader.erl	/^-module(yx_reader).$/;"	m
+yx_server	.\src\base\yx_server.erl	/^-module(yx_server).$/;"	m
+yx_server_base	.\src\yx_server_base.erl	/^-module(yx_server_base).$/;"	m
+yx_sup	.\src\base\yx_sup.erl	/^-module(yx_sup).$/;"	m
+yx_tcp_acceptor	.\src\base\yx_tcp_acceptor.erl	/^-module(yx_tcp_acceptor).$/;"	m
+yx_tcp_acceptor_sup	.\src\base\yx_tcp_acceptor_sup.erl	/^-module(yx_tcp_acceptor_sup).$/;"	m
+yx_tcp_client_sup	.\src\base\yx_tcp_client_sup.erl	/^-module(yx_tcp_client_sup).$/;"	m
+yx_tcp_listener	.\src\base\yx_tcp_listener.erl	/^-module(yx_tcp_listener).$/;"	m
+yx_tcp_listener_sup	.\src\base\yx_tcp_listener_sup.erl	/^-module(yx_tcp_listener_sup).$/;"	m
+yx_unite	.\src\base\yx_unite.erl	/^-module(yx_unite).$/;"	m
+yx_unite_base	.\src\yx_unite_base.erl	/^-module(yx_unite_base).$/;"	m
