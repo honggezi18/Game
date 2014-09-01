@@ -1,0 +1,14 @@
+1. 协议文件名一定要用 ptxxx.proto。例如 pt100.proto 。数字xxx表示对应的功能号。
+2. 协议名一定要用 Ptxxxxx_toc(表示发送到客户端) 和 Ptxxxxx_tos（表示发送到服务端）。数字xxxxx表示对应的协议号。
+	例如 ： 
+message Pt20100_toc{
+   required int32 id = 1;
+   required string name = 2;
+}
+message Pt20100_tos{
+    required int8 flag = 1;
+}
+
+3. 加上包头信息 package Jieyou.NX;  （客户端要用到）
+
+

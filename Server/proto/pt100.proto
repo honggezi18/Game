@@ -1,0 +1,101 @@
+//-----------------------------------
+// @Module  : pt_100
+// @Author  : xyao
+// @Email   : jiexiaowen@gmail.com
+// @Created : 2010.04.29
+// @Description: 注册登录系统
+//-----------------------------------
+
+package Jieyou.NX;
+
+// 10000 登录
+message Pt10000_tos{
+	required	int32 	acc_id = 1;
+	required	string 	accname = 2;
+	required	int32 	time = 3;
+	required	string 	ticket = 4;
+}
+message Pt10000_toc{
+	required int32 	code = 1;		// 0表示登录验证失败 其他表示玩家Id
+	required int32	num = 2;
+	required int32	career = 3;
+	required int32	time = 4;
+}
+
+// 10002 打包角色列表
+message Pt10002_tos{
+}
+message Pt10002_toc{
+	message Player {
+		required int32 id = 1;
+		required int32 status = 2;
+		required int32 career = 3;
+		required int32 sex = 4;
+		required int32 lv = 5;
+		required string name = 6;
+		required int32 realm = 7;
+	}
+	repeated Player players = 1;
+}
+
+// 10003 创建角色
+message Pt10003_tos{
+	required int32 realm = 1;
+	required int32 career = 2;
+	required int32 sex = 3;
+	required string name = 4;
+}
+message Pt10003_toc{
+	required int32 code = 1;
+	required int32 id = 2;
+}
+
+// 10004 选择角色进入游戏
+message Pt10004_tos{
+	required int32 id = 1;
+	required int32 time = 2;
+	required string ticket = 3;
+}
+message Pt10004_toc{
+	required int32 code = 1;
+}
+
+// 10005 删除角色
+message Pt10005_tos{
+	required int32 id = 1;
+}
+message Pt10005_toc{
+	required int32 code = 1;
+}
+
+// 10006 心跳包
+message Pt10006_tos{
+}
+message Pt10006_toc{
+}
+
+// 10010 检查名字
+message Pt10010_tos{
+	required string name = 1;
+}
+message Pt10010_toc{
+	required int32 code = 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

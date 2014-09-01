@@ -1,0 +1,118 @@
+//-----------------------------------
+// @Module  : pt_120
+// @Author  : xyao
+// @Email   : jiexiaowen@gmail.com
+// @Created : 2011.06.23
+// @Description: 12场景信息
+//-----------------------------------
+
+package Jieyou.NX;
+
+// ==========================================================
+// 公共信息
+// 玩家信息 ： 12002、12003 共同用到
+message Pt_player{
+	required int32 	id = 1;
+}
+// 怪物信息 : 12002、12007 共同用到
+message Pt_mon {
+	required int32 	id = 1;
+}
+// ==========================================================
+
+// 12001 走路
+message Pt12001_tos{
+	required int32 	x = 1;
+	required int32 	y = 2;
+	required int32 	fly = 3;
+	required int32 	d1 = 4;
+	required int32 	d2 = 5;
+	required int32	skill = 6;
+	required int32	scene = 7;
+}
+message Pt12001_toc{
+	required int32 	x = 1;
+	required int32 	y = 2;
+	required int32 	id = 3;
+	required string platform = 4;
+	required int32	server_id = 5;
+	required int32	fly = 6;
+	required int32	d1 = 7;
+	required int32	d2 = 8;
+	required int32	skill = 9;
+}
+
+// 12002 加载场景
+message Pt12002_tos{
+}
+message Pt12002_toc{
+	repeated Pt_player 	players = 1;
+	repeated Pt_mon 	mons = 2;
+}
+
+// 12003 进入新场景广播给本场景的人
+message Pt12003_toc{
+	required Pt_player player = 1;
+}
+
+// 12004 离开场景
+message Pt12004_toc{
+	required int32 	id = 1;
+	required string platform = 2;
+	required int32	server_id = 3;
+}
+
+// 12005 切换场景
+message Pt12005_tos{
+	required int32 	scene_id = 1;
+}
+message Pt12005_toc{
+	required int32 id = 1;
+	required int32 x = 2;
+	required int32 y = 3;
+	required string name = 4;
+	required int32 scene_id = 5;
+}
+
+// 12006 。。。
+message Pt12006_toc{
+	required int32 id = 1;
+}
+
+// 12007 有怪物进入场景
+message Pt12007_toc{
+	required Pt_mon mon = 1;
+}
+
+// 12008 怪物移动
+message Pt12008_toc{
+	required int32 id = 1;
+	required int32 x = 2;
+	required int32 y = 3;
+	required int32 pix = 4;
+	required int32 piy = 5;
+}
+
+// 12009 血量变化
+message Pt12009_toc{
+	required int32 	id = 1;
+	required string platform = 2;
+	required int32 	server_id = 3;
+	required int32 	hp = 4;
+	required int32	hp_lim = 5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

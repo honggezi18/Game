@@ -1,0 +1,12 @@
+{
+	[
+		'src/*',
+		'src/*/*',
+		'src/*/*/*'
+	]
+	,[
+		entrypt_debug_info
+		,{i, "include"}
+		,{outdir, "ebin"}
+	]
+}.
