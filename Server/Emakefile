@@ -1,5 +1,7 @@
 {
 	[
+		'src/lib/common/conf_dyn.erl',
+		'src/lib/common/proto_dyn.erl',
 		'src/*',
 		'src/*/*',
 		'src/*/*/*'
