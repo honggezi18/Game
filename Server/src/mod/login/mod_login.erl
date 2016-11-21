@@ -26,7 +26,7 @@ login(do, [Id, Ip, Socket])  ->
     %% 检查用户登陆和状态已经登陆的踢出出去
     check_player(Id),
     {ok, Pid} = mod_server:start(),
-    Time = util:unixtime()+1,
+    Time = util:unixtime()+1, % 11
     %%更新
     case lib_login:update_login_data(Id, Ip, Time) of
         1 -> %%登陆启动
