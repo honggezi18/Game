@@ -8,7 +8,7 @@
 
 package Jieyou.NX;
 
-// 10000 登录
+// 10000 登录  
 message Pt10000_tos{
 	required	int32 	acc_id = 1;
 	required	string 	accname = 2;

@@ -1,7 +1,7 @@
 %%%--------------------------------------
 %%% @Module  : lib_player_base
 %%% @Author  : huangcha
-%%% @Created : 2014.08.14
+%%% @Created : 2014.08.14  1
 %%% @Description:角色相关处理
 %%%--------------------------------------
 -module(lib_player_base).
